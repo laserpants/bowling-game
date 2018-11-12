@@ -30,3 +30,7 @@ Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm 
 | Torsdag       | Klientapp              | 1-3 timmar |
 | Fredag        | Klientapp              | 1-3 timmar | 
 | L&ouml;rdag   | Premiärfest på Café Opera :smiley: | 
+
+### Test
+
+### Dokumentation
