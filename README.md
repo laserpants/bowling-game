@@ -74,11 +74,15 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
    0          0          0          -          0
 ```
 
-I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att simulera klotets rörelse och interaktion med käglorna, genom vilket man uppnår ett mer intressant resultat.
+#### En 
 
-I detta fall har dock inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och 
+I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och interaktion med käglorna, genom vilket man uppnår ett mer intressant resultat.
 
-Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. Vi antar att, utifrån en konfiguration av *m* 
+#### Slumptalsbaserad
+
+I detta fall har inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en sannolikhetsfördelning.
+
+Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. Vi antar att P(k = k₀) = 1:11 och P(j = j₀) = 1:(10 - k + 1).
 
 ### Test
 
