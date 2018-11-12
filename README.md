@@ -1,4 +1,4 @@
-# :bowling: bowling-game
+# bowling-game :bowling:
 
 Ett bowlingspel där två personer spelar mot varandra. 
 
