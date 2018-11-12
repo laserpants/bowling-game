@@ -14,7 +14,7 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 ##### `start`
 
-En ny spelomgång registreras. Returnerar ett unikt ID som används i efterföljande anrop.
+En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i efterföljande anrop.
 
 ```json
 {
@@ -23,6 +23,8 @@ En ny spelomgång registreras. Returnerar ett unikt ID som används i efterfölj
 ```
 
 ##### `roll/:game_id`
+
+Avancerar en pågående spelomgång genom att beräkna en ny uppställning.
 
 ```json
 {
