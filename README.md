@@ -78,7 +78,7 @@ I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) 
 
 I detta fall har dock inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och 
 
-Antag att det är en 1:11 chans att spelaren slår ut *k* käglor i första slaget, för *0 <= k <= 10*.
+Antag att det är en 1:11 chans att spelaren slår ut *k* käglor i första slaget, för *0 ≤ k ≤ 10*.
 
 ### Test
 
