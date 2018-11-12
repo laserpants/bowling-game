@@ -12,9 +12,15 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 #### API
 
+Två 
+
 ##### `init`
 
+En ny omgång skapas. Returnerar ett unikt ID som används i efterföljande anrop.
+
 ##### `roll (game_id)`
+
+
 
 #### Klient
 
