@@ -75,19 +75,11 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
    0          0          0          -          0
 ```
 
-| Kvarvarande käglor   |                        |            |
-|----------------------|------------------------|------------|
-| 0                    | 1                      |            |
-| 1                    | 10                     |            |
-| 2                    | 45                     |            |
-| 3                    | 120                    |            |
-| 4                    | 210                    |            |
-| 5                    | 252                    |            | 
-| 6                    | 210                    |            |
-| 7                    | 120                    |            |
-| 8                    | 45                     |            |
-| 9                    | 10                     |            |
-| 10                   | 1                      |            |
+I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren påverkar förloppet genom att använda muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att simulera klotets rörelseförlopp och interaktion med käglorna, genom vilket man uppnår ett mer intressant resultat.
+
+I detta fall har dock inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och 
+
+Antag att det är en 1:11 chans att spelaren slår ut *k* käglor i första slaget, för *0 <= k <= 10*.
 
 ### Test
 
