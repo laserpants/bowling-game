@@ -78,7 +78,7 @@ I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) 
 
 I detta fall har dock inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och 
 
-Antag att spelaren slår ut *k* käglor i första slaget och *l* käglor i andra slaget, där *l ≤ (10 - k)*.
+Antag att spelaren slår ut *k* käglor i första slaget och *j* käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*.
 
 ### Test
 
