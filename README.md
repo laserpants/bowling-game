@@ -24,7 +24,7 @@ En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i ef
 
 ##### `roll/:game_id`
 
-Avancerar en pågående spelomgång genom att beräkna en ny uppställning.
+Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se nedan för resonemang kring den bakomliggande processen.
 
 ```json
 {
@@ -56,6 +56,24 @@ Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm 
 | Torsdag       | Klientapp              | 1-3 timmar |
 | Fredag        | Klientapp              | 1-3 timmar | 
 | L&ouml;rdag   | Premiärfest på Café Opera :smiley: | 
+
+### Resonemang
+
+```
+6 7 8 9
+ 3 4 5
+  1 2 
+   0
+```
+
+Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar i en av 2^10 = 1024 möjliga konfigurationer av käglor, där varje enskild kägla antingen kan ha slagits ut eller inte. 
+
+```
+6 7 8 9    - - - 9    6 7 8 9    - - - -    6 7 8 9
+ - - 5      - 4 -      - - -      - - -      3 - 5
+  1 -        - -        - -        - -        1 2
+   0          0          0          -          0
+```
 
 ### Test
 
