@@ -12,6 +12,10 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 #### API
 
+#### Klient
+
+Klientappen kommer använda antingen React eller Elm.
+
 ### Plan
 
 |               |                        | 
