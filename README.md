@@ -18,11 +18,11 @@ Klientappen kommer använda antingen React eller Elm.
 
 ### Plan
 
-|               |                        | 
-|---------------|------------------------|
-| M&aring;ndag  |                        |
-| Tisdag        |                        | 
-| Onsdag        |                        | 
-| Torsdag       |                        | 
-| Fredag        |                        | 
-| L&ouml;rdag   |                        | 
+|               |                        |            |
+|---------------|------------------------|------------|
+| M&aring;ndag  |                        |            |
+| Tisdag        |                        | 2-3 timmar |
+| Onsdag        |                        | 2-3 timmar |
+| Torsdag       |                        | 2-3 timmar |
+| Fredag        |                        | 2-3 timmar | 
+| L&ouml;rdag   | premiärfest på Café Opera :smiley: | 
