@@ -28,7 +28,6 @@ Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid 
 
 ```json
 {
-  "game_id": "ba6b636f4f23"
 }
 ```
 
@@ -38,7 +37,6 @@ Visar statistik för ett pågående eller avslutat spel.
 
 ```json
 {
-  "game_id": "ba6b636f4f23"
 }
 ```
 
@@ -48,7 +46,7 @@ Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm 
 
 ### Plan
 
-|               |                        |            |
+| Dag           | Aktivitet              | Timmar     |
 |---------------|------------------------|------------|
 | M&aring;ndag  | Projektupplägg         | 1-3 timmar |
 | Tisdag        | API                    | 1-3 timmar |
