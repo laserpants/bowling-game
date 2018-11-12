@@ -20,9 +20,9 @@ Klientappen kommer använda antingen React eller Elm.
 
 |               |                        |            |
 |---------------|------------------------|------------|
-| M&aring;ndag  |                        |            |
-| Tisdag        |                        | 2-3 timmar |
-| Onsdag        |                        | 2-3 timmar |
-| Torsdag       |                        | 2-3 timmar |
-| Fredag        |                        | 2-3 timmar | 
-| L&ouml;rdag   | premiärfest på Café Opera :smiley: | 
+| M&aring;ndag  |                        | 1-3 timmar |
+| Tisdag        | API                    | 1-3 timmar |
+| Onsdag        | API                    | 1-3 timmar |
+| Torsdag       | Klientapp              | 1-3 timmar |
+| Fredag        | Klientapp              | 1-3 timmar | 
+| L&ouml;rdag   | Premiärfest på Café Opera :smiley: | 
