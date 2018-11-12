@@ -24,7 +24,7 @@ En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i ef
 
 ##### `roll/:game_id`
 
-Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se nedan för resonemang kring den bakomliggande processen.
+Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#resonemang) för resonemang kring den bakomliggande processen.
 
 ```json
 {
