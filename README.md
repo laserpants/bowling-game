@@ -46,15 +46,15 @@ Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm 
 
 ### Plan
 
-| Dag           | Aktivitet              | Timmar     |
-|---------------|------------------------|------------|
-| M&aring;ndag  | Projektupplägg         | 1-3 timmar |
-| Tisdag        | API                    | 1-3 timmar |
-| Onsdag        | API                    | 1-3 timmar |
-| Torsdag       | Klientapp              | 1-3 timmar |
-| Fredag        | Klientapp              | 1-3 timmar | 
-| L&ouml;rdag   | Test och dokumentation | 1-3 timmar | 
-| S&ouml;ndag   | Premiärfest på Café Opera :smiley:  | 
+| Dag           | Aktivitet                   | Timmar     |
+|---------------|-----------------------------|------------|
+| M&aring;ndag  | Projektupplägg              | 1-3 timmar |
+| Tisdag        | API                         | 1-3 timmar |
+| Onsdag        | API                         | 1-3 timmar |
+| Torsdag       | Klientapp                   | 1-3 timmar |
+| Fredag        | Klientapp                   | 1-3 timmar | 
+| L&ouml;rdag   | Test och dokumentation      | 1-3 timmar | 
+| S&ouml;ndag   | Premiärfest på Café Opera?  |            |
 
 ### Resonemang
 
@@ -65,7 +65,7 @@ Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm 
    0
 ```
 
-Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar i en av 2^10 = 1024 möjliga konfigurationer av käglor, där varje enskild kägla antingen kan ha slagits ut eller inte. 
+Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar i en av 2^10 = 1024 möjliga konfigurationer av käglor, där varje enskild kägla antingen kan ha slagits ut eller lämnats intakt.
 
 ```
 6 7 8 9    - - - 9    6 7 8 9    - - - -    6 7 8 9
@@ -74,7 +74,7 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
    0          0          0          -          0
 ```
 
-#### En 
+#### Interaktivt spel
 
 I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och interaktion med käglorna, genom vilket man uppnår ett mer intressant resultat.
 
