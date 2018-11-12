@@ -14,13 +14,13 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 Två 
 
-##### `init`
+##### `start`
 
 En ny omgång skapas. Returnerar ett unikt ID som används i efterföljande anrop.
 
-##### `roll (game_id)`
+##### `roll/:game_id`
 
-
+##### `stats/:game_id`
 
 #### Klient
 
