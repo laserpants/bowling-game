@@ -14,11 +14,11 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 ### Plan
 
-|               |                        |   |   |   |
-|---------------|------------------------|---|---|---|
-| M&aring;ndag  |                        |   |   |   |
-| Tisdag        |                        |   |   |   |
-| Onsdag        |                        |   |   |   |
-| Torsdag       |                        |   |   |   |
-| Fredag        |                        |   |   |   |
-| L&ouml;rdag   |                        |   |   |   |
+|               |                        | 
+|---------------|------------------------|
+| M&aring;ndag  |                        |
+| Tisdag        |                        | 
+| Onsdag        |                        | 
+| Torsdag       |                        | 
+| Fredag        |                        | 
+| L&ouml;rdag   |                        | 
