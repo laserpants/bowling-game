@@ -75,6 +75,20 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
    0          0          0          -          0
 ```
 
+| Kvarvarande käglor   |                        |            |
+|----------------------|------------------------|------------|
+| 0                    | 1                      |            |
+| 1                    | 10                     |            |
+| 2                    | 45                     |            |
+| 3                    | 120                    |            |
+| 4                    | 210                    |            |
+| 5                    | 252                    |            | 
+| 6                    | 210                    |            |
+| 7                    | 120                    |            |
+| 8                    | 45                     |            |
+| 9                    | 10                     |            |
+| 10                   | 1                      |            |
+
 ### Test
 
 ### Dokumentation
