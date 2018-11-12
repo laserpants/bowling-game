@@ -12,15 +12,27 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 #### API
 
-Två 
-
 ##### `start`
 
 En ny omgång skapas. Returnerar ett unikt ID som används i efterföljande anrop.
 
+```json
+{
+  "game_id": "ba6b636f4f23"
+}
+```
+
 ##### `roll/:game_id`
 
+```json
+{
+  "game_id": "ba6b636f4f23"
+}
+```
+
 ##### `stats/:game_id`
+
+Visar statistik för ett pågående eller avslutat spel.
 
 #### Klient
 
