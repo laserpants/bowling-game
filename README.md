@@ -36,6 +36,12 @@ Avancerar en pågående spelomgång genom att beräkna en ny uppställning.
 
 Visar statistik för ett pågående eller avslutat spel.
 
+```json
+{
+  "game_id": "ba6b636f4f23"
+}
+```
+
 #### Klient
 
 Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm som utvecklingsverktyg.
