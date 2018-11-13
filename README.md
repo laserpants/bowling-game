@@ -80,9 +80,9 @@ I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) 
 
 #### Slumptalsbaserad
 
-I detta fall har inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en  sannolikhetsfördelning.
+I detta fall har inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en  enkel sannolikhetsfördelning.
 
-Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. Vi antar att P(k = k₀) = 1:11 och P(j = j₀) = 1:(10 - k + 1).
+Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. För enkelhets skull antar vi att *P(k = k₀) = 1:11* och *P(j = j₀) = 1:(10 - k + 1)*. Det finns *C(10, k)* möjliga sätt att slå ut *k* käglor, där *C(n, k)* är binomialkoefficienten.
 
 ### Test
 
