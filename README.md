@@ -28,6 +28,7 @@ Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid 
 
 ```json
 {
+   TODO
 }
 ```
 
@@ -37,6 +38,7 @@ Visar statistik för ett pågående eller avslutat spel.
 
 ```json
 {
+   TODO
 }
 ```
 
@@ -56,6 +58,10 @@ Klientappen kommer vara webbläsarbaserad och använda antingen React eller Elm 
 | L&ouml;rdag   | Test och dokumentation      | 1-3 timmar | 
 | S&ouml;ndag   | Premiärfest på Café Opera?  |            |
 
+| Dag           | Aktivitet                   | Timmar     |
+|---------------|-----------------------------|------------|
+| Vecka 2       | Utforska alternativa idéer (se nedan) | 5-6 timmar |
+
 ### Resonemang
 
 ```
@@ -74,16 +80,28 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
    0          0          0          -          0
 ```
 
-#### Interaktivt spel
+#### En kort parentes om alternativa idéer
 
 I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och samverkan med käglorna, genom vilket man uppnår ett mer intressant resultat.
 
-#### Slumptalsbaserad
+##### Simulering
 
-I detta fall har inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en  enkel sannolikhetsfördelning.
+En annan variant skulle vara att spelaren har möjlighet att ange ett antal inparametrar och att spelförloppet bygger på någon Game of Life-liknande simulering där de mönster som uppstår avgör vilka käglor som träffas av klotet. Detta kan vara värt att utforska senare.
 
-Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. För enkelhets skull antar vi att *P(k = k₀) = 1:11* och *P(j = j₀) = 1:(10 - k + 1)*. Det finns *C(10, k)* möjliga sätt att slå ut *k* käglor, där *C(n, k)* är binomialkoefficienten.
+#### En slumptalsbaserat modell
+
+I detta fall har inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en enkel sannolikhetsfördelning.
+
+Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. För enkelhets skull antar vi att *P(k = k₀) = 1:11* och *P(j = j₀) = 1:(10 - k + 1)*. Om vi vill veta exakt vilka käglor som slagits ut (dvs. inte bara antalet), finns det *C(10, k)* möjliga sätt att slå ut *k* käglor, där *C(n, k)* är binomialkoefficienten, kan vi åter igen använda en uniform sannolikhetsfördelning över denna mängd. Detta är inte speciellt realistiskt om man tar i beaktande, t.ex., konfigurationerna nedan, där den till höger inträffar betydligt oftare än den till vänster. Men hursomhelst&hellip;
+
+```
+6 7 8 9   6 7 8 -
+ 3 - 5     3 4 5
+  1 2       1 2
+   0         0
+```
 
 ### Test
 
 ### Dokumentation
+
