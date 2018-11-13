@@ -90,9 +90,9 @@ En annan rolig variant skulle vara att spelaren har möjlighet att ange ett anta
 
 #### En slumptalsbaserat modell
 
-I detta fall har inte spelaren någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en naiv sannolikhetsfördelning.
+I den nuvarande lösningen har spelaren inte någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en naiv sannolikhetsfördelning.
 
-Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. För enkelhets skull antar vi att *P(k = k₀) = 1:11* och *P(j = j₀) = 1:(10 - k + 1)*. Om vi vill veta exakt vilka käglor som slagits ut (dvs. inte bara antalet) finns det *C(10, k)* möjliga sätt att slå ut *k* käglor, där *C(n, k)* är binomialkoefficienten, och vi kan åter igen använda en uniform sannolikhetsfördelning över denna mängd. Detta är inte speciellt realistiskt om man tar i beaktande, t.ex., de två konfigurationerna nedan, där den till höger inträffar betydligt oftare än den till vänster. 
+Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. För enkelhets skull antar vi att *P(k = k₀) = 1:11* och *P(j = j₀) = 1:(10 - k + 1)*. Om vi vill veta exakt vilka käglor som slagits ut (dvs. inte bara antalet) finns det *C(10, k)* möjliga sätt att slå ut *k* käglor, där *C(n, k)* är binomialkoefficienten, och vi kan åter igen använda en uniform sannolikhetsfördelning över denna mängd. Detta är inte speciellt realistiskt om man tar i beaktande, t.ex., de två konfigurationerna nedan, där den till höger inträffar betydligt oftare än den till vänster. (Vi bortser för tillfället från dessa mer teoretiska problemställningar.)
 
 ```
 6 7 8 9   6 7 8 -
