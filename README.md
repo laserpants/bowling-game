@@ -88,7 +88,7 @@ I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) 
 
 En annan rolig variant skulle vara att spelaren har möjlighet att ange ett antal inparametrar och att spelförloppet bygger på någon Game of Life-liknande simulering där de mönster som uppstår avgör vilka käglor som träffas av klotet. Detta kan vara värt att utforska senare.
 
-#### En slumptalsbaserat modell
+#### En slumptalsbaserad modell
 
 I den nuvarande lösningen har spelaren inte någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en naiv sannolikhetsfördelning.
 
