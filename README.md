@@ -60,7 +60,7 @@ Klientappen kommer vara webbläsarbaserad och använda JavaScript som utveckling
 
 | Dag           | Aktivitet                   | Timmar     |
 |---------------|-----------------------------|------------|
-| Vecka 2       | Utforska alternativa idéer (se nedan) | 5-6 timmar |
+| Vecka 2       | Utforska alternativa idéer (se nedan) | 3-6 timmar |
 
 ### Resonemang
 
