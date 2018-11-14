@@ -12,37 +12,53 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 #### API
 
-##### `start`
+##### `POST /game`
 
 En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i efterföljande anrop.
 
 ```json
 {
   "game": {
-    "id": "ba6b636f4f23"
+    "id": "1ljz9uxjogpc51o"
   }
 }
 ```
 
-##### `roll/:game_id`
+##### `POST /frame/:game_id`
 
 Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#resonemang) för resonemang kring den bakomliggande processen.
 
 ```json
 {
-   TODO
+  "game": {
+    "id": "1ljz9uxjogpc51o"
+  }
 }
 ```
 
-##### `stats/:game_id`
+##### `GET /score/:game_id`
+
+TODO
+
+```json
+{
+  "error": "not implemented"
+}
+```
+
+##### `GET /stats/:game_id`
 
 Visar statistik för ett pågående eller avslutat spel.
 
 ```json
 {
-   TODO
+  "error": "not implemented"
 }
 ```
+
+#### Poängberäkning 
+
+TODO
 
 #### Klient
 
