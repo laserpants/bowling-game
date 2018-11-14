@@ -6,8 +6,8 @@ import random from './rand';
 /**
  * A frame consists of up to two deliveries. If you bowl a strike there is
  * only one delivery in that frame. However, if you have pins remaining after
- * the first ball, then the frame consists of two deliveries. 
- */ 
+ * the first ball, then the frame consists of two deliveries.
+ */
 class Frame {
 
   /**
@@ -25,14 +25,14 @@ class Frame {
   }
 
   /**
-   * @returns true if the frame is a strike, or false otherwise
+   * @returns {boolean} true if the frame is a strike, or false otherwise
    */
   isStrike() {
     return 1 == this.deliveries.length;
   }
 
   /**
-   * @returns true if the frame is a spare, or false otherwise
+   * @returns {boolean} true if the frame is a spare, or false otherwise
    */
   isSpare() {
     if (2 != this.deliveries.length)
@@ -42,11 +42,11 @@ class Frame {
 
 }
 
-/** 
- * A game consists of ten frames. A maximum of two deliveries is made in each 
- * frame except in the last frame, in which three deliveries are made if the 
+/**
+ * A game consists of ten frames. A maximum of two deliveries is made in each
+ * frame except in the last frame, in which three deliveries are made if the
  * player has scored a strike or a spare.
- */ 
+ */
 class Game {
 
   static store;
@@ -62,12 +62,13 @@ class Game {
     Game.store.save(this);
   }
 
-  /** 
+  /**
    * Static method to lookup an existing game by its ID.
    *
    * @param {string} id the ID of the game to search for
    *
-   * @returns a Game object, or null if a game with the given ID does not exist
+   * @returns {Game} a Game object, or null if a game with the given ID does
+   *                 not exist
    */
   static find(id) {
     return Game.store.find(id);
@@ -76,7 +77,8 @@ class Game {
   /**
    * Advance an ongoing game by generating and inserting a new frame.
    *
-   * @returns a new frame, or the empty list if the game is already complete
+   * @returns {Array} a new frame, or the empty array if the game is already
+   *                  complete
    */
   insertFrame() {
     if (this.isComplete()) {
@@ -88,7 +90,7 @@ class Game {
   }
 
   /**
-   * @returns a boolean denoting whether the game is completed or not
+   * @returns {boolean} a boolean denoting whether the game is completed or not
    */
   isComplete() {
     return 10 == this.frames.length;
@@ -97,8 +99,8 @@ class Game {
   _generateFrame() {
     const frame = new Frame();
     if (9 == this.frames.length) {
-      // In the last frame, three deliveries are made if the player has scored 
-      // a strike or a spare in that frame. 
+      // In the last frame, three deliveries are made if the player has scored
+      // a strike or a spare in that frame.
       if (frame.isStrike()) {
         const bonusFrame = new Frame();
         return frame.deliveries.concat(bonusFrame.deliveries);

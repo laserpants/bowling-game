@@ -4,7 +4,7 @@ import Game    from './game';
 const app  = express();
 const port = process.env.PORT || 4399;
 
-/**
+/*
  * Create a new game
  */
 app.post('/games', (req, res) => {
@@ -13,7 +13,7 @@ app.post('/games', (req, res) => {
   res.json({ game });
 });
 
-/**
+/*
  * View an existing game
  */
 app.get('/games/:id', (req, res) => {
@@ -28,7 +28,7 @@ app.get('/games/:id', (req, res) => {
   res.json({ game });
 });
 
-/**
+/*
  * Advance an ongoing game by inserting a new frame
  */
 app.post('/games/:id/frames', (req, res) => {
