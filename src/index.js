@@ -15,23 +15,19 @@ app.get('/games/:id', (req, res) => {
   if (!game) {
     res
       .status(404)
-      .json({
-        error: 'a game with that id does not exist'
-      });
+      .json({ error: 'a game with that id does not exist' });
     return;
   }
   game.complete = game.isComplete();
   res.json({ game });
 });
 
-app.post('/games/:game_id/frames', (req, res) => {
-  const game = Game.find(req.params['game_id']);
+app.post('/games/:id/frames', (req, res) => {
+  const game = Game.find(req.params['id']);
   if (!game) {
     res
       .status(404)
-      .json({
-        error: 'a game with that id does not exist'
-      });
+      .json({ error: 'a game with that id does not exist' });
     return;
   }
   game.complete = game.isComplete();

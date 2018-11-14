@@ -111,6 +111,10 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
    0         0
 ```
 
+### Installation
+
+TODO
+
 ### Test
 
 TODO
