@@ -176,4 +176,12 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
 
 ### Test
 
-TODO
+```bash
+npm test
+```
+
+### Dokumentation
+
+```bash
+npm run docs
+```
