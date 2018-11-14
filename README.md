@@ -125,7 +125,7 @@ Klientappen kommer vara webbläsarbaserad och använda JavaScript som utveckling
 | Torsdag       | Klientapp                   | 1-3 timmar |    |
 | Fredag        | Klientapp                   | 1-3 timmar |    |
 | L&ouml;rdag   | Test och dokumentation      | 1-3 timmar |    |
-| S&ouml;ndag   | Premiärfest på Café Opera?  |            |    |
+| S&ouml;ndag   | :tada: Premiärfest på Café Opera? |      |    |
 
 | Dag           | Aktivitet                   | Timmar     |
 |---------------|-----------------------------|------------|
