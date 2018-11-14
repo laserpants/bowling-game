@@ -11,7 +11,7 @@ import random from './rand';
 class Frame {
 
   ///
-  /// Create a random frame
+  /// Create and populate a frame with random values
   ///
   constructor() {
     this.deliveries = [];
@@ -61,6 +61,10 @@ class Game {
   ///
   /// Static method to lookup an existing game by its ID.
   ///
+  /// \params id the ID of the game to lookup
+  ///
+  /// \returns a Game object, or null if a game with the given ID does not exist
+  ///
   static find(id) {
     return Game.store.find(id);
   }
@@ -80,7 +84,7 @@ class Game {
   }
 
   ///
-  /// \returns whether the game is completed or not
+  /// \returns a boolean denoting whether the game is completed or not
   ///
   isComplete() {
     return 10 == this.frames.length;
