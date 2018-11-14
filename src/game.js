@@ -1,8 +1,36 @@
 import assert from 'assert';
 import uniqid from 'uniqid';
 import MemoryStore from './store/memory';
+import random from './rand';
 
 // http://www.tenpin.org.au/index.php?id=875
+
+///
+/// A frame consists of up to two deliveries. If you bowl a strike there is
+/// only one delivery per frame. However, if you leave pins remaining after
+/// the first ball, a frame consists of two deliveries. 
+///
+class Frame {
+
+  constructor() {
+    this.deliveries = [];
+    const k = random(10);
+    this.deliveries.push(k);
+    if (10 != k) {
+      this.deliveries.push(random(10 - k));
+    }
+  }
+
+  isStrike() {
+    return [10] == this.deliveries;
+  }
+
+  isSpare() {
+    return (2 == this.deliveries.length) 
+      && (10 == this.deliveries[0] + this.deliveries[1]);
+  }
+
+}
 
 class Game {
 
@@ -10,6 +38,7 @@ class Game {
 
   constructor() {
     this.id = uniqid();
+    this.frames = [];
     Game.store.save(this);
   }
 
@@ -17,32 +46,32 @@ class Game {
     return Game.store.find(id);
   }
 
-  ///
-  /// A frame consists of up to two deliveries. If you bowl a strike there is
-  /// only one delivery per frame. However, if you leave pins remaining after
-  /// the first ball, a frame consists of two deliveries. The tenth frame
-  /// consists of up to three deliveries if you should either bowl a strike on
-  /// your first delivery or make a spare.
-  ///
-  generateFrame() {
-    var isLast = false;
-    if (isLast)
-    {
-      return []; // todo
+  insertFrame() {
+    if (this.isComplete()) {
+      return [];
     }
-    else
-    {
-      const k = Math.floor(Math.random()*11);
-      assert(k <= 10);
+    const frame = this._generateFrame();
+    this.frames.push(frame);
+    return frame;
+  }
 
-      if (10 == k)
-          return [k];  // strike!
+  isComplete() {
+    return 10 == this.frames.length;
+  }
 
-      const j = Math.floor(Math.random()*(11 - k));
-      assert(j <= 10 - k);
-
-      return [k, j];
+  _generateFrame() {
+    const frame = new Frame();
+    if (9 == this.frames.length) {
+      // In the last frame, three deliveries are made if the player has scored 
+      // a strike or a spare in that frame. 
+      if (frame.isStrike()) {
+        const bonusFrame = new Frame();
+        return frame.deliveries.concat(bonusFrame.deliveries);
+      } else if (frame.isSpare()) {
+        return frame.deliveries.concat(random(10));
+      }
     }
+    return frame.deliveries;
   }
 
 }

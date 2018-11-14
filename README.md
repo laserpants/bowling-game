@@ -26,7 +26,7 @@ En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i ef
 
 ##### `POST /frame/:game_id`
 
-Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#resonemang) för resonemang kring den bakomliggande processen.
+Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring den bakomliggande processen.
 
 ```json
 {
@@ -80,7 +80,7 @@ Klientappen kommer vara webbläsarbaserad och använda JavaScript som utveckling
 |---------------|-----------------------------|------------|
 | Vecka 2       | Utforska alternativa idéer (se nedan) | 3-6 timmar |
 
-### Resonemang
+### Bakgrund
 
 ```
 6 7 8 9
