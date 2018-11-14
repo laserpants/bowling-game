@@ -40,7 +40,7 @@ Lösningen innefattar en API-del samt en klientdel.
 
 En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i efterföljande anrop.
 
-*Exampel:*
+**Exempel:**
 
 ```bash
 curl -X POST http://localhost:4399/games
@@ -58,7 +58,7 @@ curl -X POST http://localhost:4399/games
 
 Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring den bakomliggande processen. Om spelomgången redan är avslutad returneras felkoden `410 Gone`.
 
-*Exampel:*
+**Exempel:**
 
 ```bash
 curl -X POST http://localhost:4399/games/1ljzfxyjoh72joh/frames
@@ -90,7 +90,7 @@ curl -X POST http://localhost:4399/games/1ljzfxyjoh72joh/frames
 
 Visar information om ett pågående eller avslutat spel.
 
-*Exampel:*
+**Exempel:**
 
 ```bash
 curl http://localhost:4399/games/1ljzfxyjoh757va
