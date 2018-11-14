@@ -76,7 +76,7 @@ curl -X POST http://localhost:4399/games/1ljzfxyjoh72joh/frames
       [ 1, 1 ],
       [ 7, 3, 7 ]
     ],
-    "complete": false
+    "complete": true
   },
   "frame": [ 7, 3, 7 ]
 }
