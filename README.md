@@ -12,7 +12,7 @@ Lösningen bygger på en enkel API-del och en klientdel.
 
 #### API
 
-##### `POST /game`
+##### `POST /games`
 
 En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i efterföljande anrop.
 
@@ -24,9 +24,9 @@ En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i ef
 }
 ```
 
-##### `POST /frame/:game_id`
+##### `POST /games/:game_id/frames`
 
-Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring den bakomliggande processen.
+Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring den bakomliggande processen. Om spelomgången redan är avslutad returneras felkoden `410 Gone`.
 
 ```json
 {
@@ -36,23 +36,15 @@ Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid 
 }
 ```
 
-##### `GET /score/:game_id`
+##### `GET /games/:id`
 
-TODO
-
-```json
-{
-  "error": "not implemented"
-}
-```
-
-##### `GET /stats/:game_id`
-
-Visar statistik för ett pågående eller avslutat spel.
+Visar information om ett pågående eller avslutat spel.
 
 ```json
 {
-  "error": "not implemented"
+  "game": {
+    "id": "1ljz9uxjogpc51o"
+  }
 }
 ```
 

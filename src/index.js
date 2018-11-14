@@ -43,18 +43,6 @@ app.post('/games/:game_id/frames', (req, res) => {
   }
 });
 
-//app.get('/games/:game_id/score', (req, res) => {
-//  res.json({
-//    stats: { error: 'not implemented' }
-//  });
-//});
-//
-//app.get('/games/:game_id/stats', (req, res) => {
-//  res.json({
-//    stats: { error: 'not implemented' }
-//  });
-//});
-
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 });
