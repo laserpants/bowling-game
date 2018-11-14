@@ -4,11 +4,7 @@ Ett bowlingspel där två personer spelar mot varandra.
 
 ### Installation
 
-TODO
-
-#### Grundförutsättning
-
-* Node och npm
+* Installera Node.js och npm
 
 #### API-server
 
@@ -22,9 +18,9 @@ npm start
 
 #### Miljövariabler
 
-| Variabel      |                             |            |
-|---------------|-----------------------------|------------|
-| PORT          |                             | 4399       |
+| Variabel      | Beskrivning                      | Förvalt värde |
+|---------------|----------------------------------|---------------|
+| PORT          | Den port some servern lyssnar på | 4399          |
 
 ### Beskrivning
 
