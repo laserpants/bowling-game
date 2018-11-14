@@ -18,7 +18,9 @@ En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i ef
 
 ```json
 {
-  "game_id": "ba6b636f4f23"
+  "game": {
+    "id": "ba6b636f4f23"
+  }
 }
 ```
 
