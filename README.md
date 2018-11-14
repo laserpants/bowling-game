@@ -8,7 +8,7 @@ En omgång startar med att användaren klickar på en knapp och genererar ett sl
 
 ### Lösning
 
-Lösningen bygger på en enkel API-del och en klientdel. 
+Lösningen bygger på en API-del och en klientdel. 
 
 #### API
 
