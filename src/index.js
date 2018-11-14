@@ -32,7 +32,7 @@ app.post('/games/:id/frames', (req, res) => {
   }
   game.complete = game.isComplete();
   if (game.complete) {
-    res.status(410).json();  // The resource is no longer available
+    res.status(410).json();  // 410 = The resource is no longer available
   } else {
     const frame = game.insertFrame();
     res.json({ game, frame });

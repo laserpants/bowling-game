@@ -31,8 +31,22 @@ Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid 
 ```json
 {
   "game": {
-    "id": "1ljz9uxjogpc51o"
-  }
+    "id": "1ljzfxyjoh72joh",
+    "frames": [
+      [ 7, 1 ],
+      [ 9, 0 ],
+      [ 1, 6 ],
+      [ 4, 2 ],
+      [ 1, 7 ],
+      [ 0, 2 ],
+      [ 3, 3 ],
+      [ 8, 2 ],
+      [ 1, 1 ],
+      [ 7, 3, 7 ]
+    ],
+    "complete": false
+  },
+  "frame": [ 7, 3, 7 ]
 }
 ```
 
@@ -43,7 +57,9 @@ Visar information om ett pågående eller avslutat spel.
 ```json
 {
   "game": {
-    "id": "1ljz9uxjogpc51o"
+    "id": "1ljzfxyjoh757va",
+    "frames": [],
+    "complete": false
   }
 }
 ```
@@ -114,6 +130,17 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
 ### Installation
 
 TODO
+
+#### Grundförutsättning
+
+TODO
+
+#### API-server
+
+```bash
+npm install
+npm start
+```
 
 ### Test
 
