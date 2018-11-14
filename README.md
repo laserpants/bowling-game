@@ -172,11 +172,15 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
 
 ### Test
 
+Tester körs genom att ange:
+
 ```bash
 npm test
 ```
 
 ### Dokumentation
+
+För att generera dokumentation:
 
 ```bash
 npm run docs
