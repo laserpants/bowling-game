@@ -3,16 +3,18 @@ import uniqid from 'uniqid';
 import MemoryStore from './store/memory';
 import random from './rand';
 
-///
-/// A frame consists of up to two deliveries. If you bowl a strike there is
-/// only one delivery in that frame. However, if you have pins remaining after
-/// the first ball, a frame consists of two deliveries. 
-///
+/**
+ * A frame consists of up to two deliveries. If you bowl a strike there is
+ * only one delivery in that frame. However, if you have pins remaining after
+ * the first ball, then the frame consists of two deliveries. 
+ */ 
 class Frame {
 
-  ///
-  /// Create and populate a frame with random values
-  ///
+  /**
+   * Create and populate a frame with random values
+   *
+   * @constructor
+   */
   constructor() {
     this.deliveries = [];
     const k = random(10);
@@ -22,16 +24,16 @@ class Frame {
     }
   }
 
-  ///
-  /// \returns true if the frame is a strike, or false otherwise
-  ///
+  /**
+   * @returns true if the frame is a strike, or false otherwise
+   */
   isStrike() {
     return 1 == this.deliveries.length;
   }
 
-  ///
-  /// \returns true if the frame is a spare, or false otherwise
-  ///
+  /**
+   * @returns true if the frame is a spare, or false otherwise
+   */
   isSpare() {
     if (2 != this.deliveries.length)
       return false;
@@ -40,40 +42,42 @@ class Frame {
 
 }
 
-///
-/// A game consists of ten frames. A maximum of two deliveries is made in each 
-/// frame except in the last frame, in which three deliveries are made if the 
-/// player has scored a strike or a spare.
-///
+/** 
+ * A game consists of ten frames. A maximum of two deliveries is made in each 
+ * frame except in the last frame, in which three deliveries are made if the 
+ * player has scored a strike or a spare.
+ */ 
 class Game {
 
   static store;
 
-  ///
-  /// Create a new game
-  ///
+  /**
+   * Create a new game
+   *
+   * @constructor
+   */
   constructor() {
     this.id = uniqid();
     this.frames = [];
     Game.store.save(this);
   }
 
-  ///
-  /// Static method to lookup an existing game by its ID.
-  ///
-  /// \params id the ID of the game to lookup
-  ///
-  /// \returns a Game object, or null if a game with the given ID does not exist
-  ///
+  /** 
+   * Static method to lookup an existing game by its ID.
+   *
+   * @param {string} id the ID of the game to search for
+   *
+   * @returns a Game object, or null if a game with the given ID does not exist
+   */
   static find(id) {
     return Game.store.find(id);
   }
 
-  ///
-  /// Advance an ongoing game by generating and inserting a new frame.
-  ///
-  /// \returns a new frame, or the empty list if the game is already complete
-  ///
+  /**
+   * Advance an ongoing game by generating and inserting a new frame.
+   *
+   * @returns a new frame, or the empty list if the game is already complete
+   */
   insertFrame() {
     if (this.isComplete()) {
       return [];
@@ -83,9 +87,9 @@ class Game {
     return frame;
   }
 
-  ///
-  /// \returns a boolean denoting whether the game is completed or not
-  ///
+  /**
+   * @returns a boolean denoting whether the game is completed or not
+   */
   isComplete() {
     return 10 == this.frames.length;
   }

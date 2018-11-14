@@ -1,4 +1,4 @@
-export default class SqliteStore {
+class SqliteStore {
 
   save(game) {
     throw new Error('not implemented');
