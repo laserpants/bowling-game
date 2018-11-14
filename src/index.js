@@ -1,46 +1,10 @@
-import express from 'express';
-import uniqid  from 'uniqid';
 import assert  from 'assert';
+import express from 'express';
+import Game    from './game';
+import MemoryStore from './store/memory';
 
 const app  = express();
 const port = process.env.PORT || 4399;
-
-class MemoryStore {
-
-  constructor() {
-    this.data = {};
-  }
-
-  save(game) {
-    this.data[game.id] = game;
-  }
-
-  find(id) {
-    return this.data[id];
-  }
-
-}
-
-//class SqliteStore {
-//}
-
-class Game {
-
-  static store;
-
-  constructor() {
-    this.id = uniqid();
-  }
-
-  save() {
-    Game.store.save(this);
-  }
-
-  static find(id) {
-    return Game.store.find(id);
-  }
-
-}
 
 // http://www.tenpin.org.au/index.php?id=875
 
@@ -60,7 +24,7 @@ function frame(isLast = false) {
     assert(k <= 10);
 
     if (10 == k)
-        return [k];
+        return [k];  // strike
 
     const j = Math.floor(Math.random()*(11 - k));
     assert(j <= 10 - k);
@@ -70,8 +34,7 @@ function frame(isLast = false) {
 }
 
 app.post('/game', (req, res) => {
-  let game = new Game();
-  game.save();
+  const game = new Game();
   res.json({
     game: { id: game.id }
   });
