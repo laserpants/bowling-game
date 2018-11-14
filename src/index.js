@@ -39,11 +39,11 @@ app.post('/games/:id/frames', (req, res) => {
       .json({ error: 'a game with that id does not exist' });
     return;
   }
-  game.complete = game.isComplete();
-  if (game.complete) {
+  if (game.isComplete()) {
     res.status(410).json();  // 410 = The resource is no longer available
   } else {
     const frame = game.insertFrame();
+    game.complete = game.isComplete();
     res.json({ game, frame });
   }
 });
