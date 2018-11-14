@@ -20,7 +20,7 @@ npm start
 
 | Variabel      | Beskrivning                      | Förvalt värde |
 |---------------|----------------------------------|---------------|
-| PORT          | Den port some servern lyssnar på | 4399          |
+| PORT          | Den port som servern lyssnar på  | 4399          |
 
 ### Beskrivning
 
