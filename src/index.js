@@ -42,7 +42,7 @@ app.get('/games/:id', (req, res) => {
 });
 
 /*
- * Advance an ongoing game by inserting a new frame
+ * Advance an ongoing game by adding a new frame
  */
 app.post('/games/:id/frames', (req, res) => {
   const game = Game.find(req.params['id']);
