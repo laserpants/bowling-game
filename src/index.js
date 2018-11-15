@@ -10,8 +10,14 @@ const port = process.env.PORT || 4399;
 app.post('/games', (req, res) => {
   const game = new Game();
   Game.store.save(game);
-  game.complete = false;
-  res.json({ game });
+  res.json({
+    game: {
+      ...game,
+      complete: false,
+      score: [],
+      currentTotal: 0
+    }
+  });
 });
 
 /*
@@ -25,8 +31,14 @@ app.get('/games/:id', (req, res) => {
       .json({ error: 'a game with that id does not exist' });
     return;
   }
-  game.complete = game.isComplete();
-  res.json({ game });
+  const score = game.score();
+  res.json({
+    game: {
+      ...game,
+      complete: game.isComplete(), score,
+      currentTotal: score.length ? score[score.length - 1] : 0
+    }
+  });
 });
 
 /*
@@ -41,11 +53,20 @@ app.post('/games/:id/frames', (req, res) => {
     return;
   }
   if (game.isComplete()) {
-    res.status(410).json();  // 410 = The resource is no longer available
+    res.status(410).json({  // 410 = Resource is no longer available
+      error: 'this game is already complete'
+    });
   } else {
     const frame = game.insertFrame();
-    game.complete = game.isComplete();
-    res.json({ game, frame });
+    const score = game.score();
+    res.json({
+      game: {
+        ...game,
+        complete: game.isComplete(), score,
+        currentTotal: score[score.length - 1]
+      },
+      frame
+    });
   }
 });
 

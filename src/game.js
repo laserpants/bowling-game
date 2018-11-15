@@ -96,12 +96,12 @@ class Game {
   }
 
   /**
-   * Generate a score card for this game in the form of an array of points
-   * accumulated after each completed frame. The number of entries in this
-   * array may be less than the number of played frames, in the case of a
-   * strike or spare, for which the score is still undetermined.
+   * Generate a score sheet for this game in the form of an array of the points
+   * accumulated after each completed frame. In the case that the last frame is
+   * a strike or spare, the number of entries in this array may be less than 
+   * the number of played frames.
    *
-   * @returns {Array} a score card for this game
+   * @returns {Array} a score sheet for this game
    */
   score() {
     let score = [], i = 0,
