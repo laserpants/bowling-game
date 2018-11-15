@@ -4,19 +4,24 @@ Ett bowlingspel där två personer spelar mot varandra.
 
 ### Installation
 
-* Installera Node.js och npm
-
-#### API-server
+* Installera [Node.js och npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+* Installera beroenden:
 
 ```bash
 npm install
 ```
+
+#### API-server
+
+Starta serverprogramvaran genom att ange:
 
 ```bash
 npm start
 ```
 
 #### Miljövariabler
+
+Följande miljövariabler är tillgängliga och kan (om så önskas) anges, antingen direkt eller i en `.env`-fil.
 
 | Variabel      | Beskrivning                      | Förvalt värde |
 |---------------|----------------------------------|---------------|
@@ -28,15 +33,27 @@ En omgång startar med att användaren klickar på en knapp och genererar ett sl
 
 ### Lösning
 
-Lösningen innefattar en API-del samt en klientdel. 
+Lösningen består av en API-del samt en klientdel. 
 
-#### HTTP API
+#### HTTP-API
+
+Gemensamt för anropen nedan är att dessa returnerar ett objekt med attributet `game`. Detta objekt har i sin tur följande underattribut:
+
+| Attribut     | Typ     | Beskrivning                                |
+|--------------|---------|--------------------------------------------|
+| id           | string  | En unik identifierare för spelomgången      |
+| complete     | boolean | Indikerar huruvida omgången är avslutad eller ej |
+| frames<sup>†</sup> | Array   | Resultat för varje enskild uppställning    |
+| score        | Array   | Poäng efter varje uppställning             |
+| currentTotal | number  | Total poängsumma i spelets nuvarande skede |
+
+† Resultatet listas som en array där varje element i sin tur är en array med ett eller två element, förutom sista uppställningen som består av två eller tre element. T.ex. `[4, 3]` innebär att fyra käglor slogs ut i första slaget, och tre i det andra.
 
 ##### `POST /games`
 
-En ny spelomgång (serie) registreras. Returnerar ett unikt ID som används i efterföljande anrop.
+En ny spelomgång (serie) registreras. Returnerar en identifierare (textsträng) som används i efterföljande anrop.
 
-**Exempel:**
+###### Exempel:
 
 ```bash
 curl -X POST http://localhost:4399/games
@@ -45,40 +62,43 @@ curl -X POST http://localhost:4399/games
 ```json
 {
   "game": {
-    "id": "1ljz9uxjogpc51o"
+    "id": "1ljzlmmjoj1s0kn",
+    "frames": [],
+    "complete": false,
+    "score": [],
+    "currentTotal": 0
   }
 }
 ```
 
 ##### `POST /games/:game_id/frames`
 
-Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring den bakomliggande processen. Om spelomgången redan är avslutad returneras felkoden `410 Gone`.
+Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring denna process. Om spelomgången redan är avslutad returneras felkoden `410 Gone`.
 
-**Exempel:**
+Detta anrop returnerar också ett attribut `frame` beskrivande den uppställning (frame) som lagts till. 
+
+###### Exempel:
 
 ```bash
-curl -X POST http://localhost:4399/games/1ljzfxyjoh72joh/frames
+curl -X POST http://localhost:4399/games/1ljzlmmjoj1s0kn/frames
 ```
 
 ```json
 {
   "game": {
-    "id": "1ljzfxyjoh72joh",
+    "id": "1ljzlmmjoj1s0kn",
     "frames": [
-      [ 7, 1 ],
       [ 9, 0 ],
-      [ 1, 6 ],
       [ 4, 2 ],
-      [ 1, 7 ],
-      [ 0, 2 ],
-      [ 3, 3 ],
-      [ 8, 2 ],
-      [ 1, 1 ],
-      [ 7, 3, 7 ]
+      [ 8, 0 ],
+      [ 6, 2 ],
+      [ 0, 8 ]
     ],
-    "complete": true
+    "complete": false,
+    "score": [ 9, 15, 23, 31, 39 ],
+    "currentTotal": 39
   },
-  "frame": [ 7, 3, 7 ]
+  "frame": [ 0, 8 ]
 }
 ```
 
@@ -86,23 +106,26 @@ curl -X POST http://localhost:4399/games/1ljzfxyjoh72joh/frames
 
 Visar information om ett pågående eller avslutat spel.
 
-**Exempel:**
+###### Exempel:
 
 ```bash
-curl http://localhost:4399/games/1ljzfxyjoh757va
+curl http://localhost:4399/games/1ljzlmmjoj1s0kn
 ```
 
 ```json
 {
   "game": {
-    "id": "1ljzfxyjoh757va",
+    "id": "1ljzlmmjoj1s0kn",
     "frames": [
+      [ 9, 0 ],
       [ 4, 2 ],
-      [ 1, 7 ],
-      [ 0, 2 ],
-      [ 3, 3 ]
+      [ 8, 0 ],
+      [ 6, 2 ],
+      [ 0, 8 ]
     ],
-    "complete": false
+    "complete": false,
+    "score": [ 9, 15, 23, 31, 39 ],
+    "currentTotal": 39
   }
 }
 ```
@@ -170,9 +193,9 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
    0         0
 ```
 
-### Tester
+### Enhetstester
 
-Testerna är baserade på ramverket Mocha. Dessa körs genom att ange:
+Testerna är baserade på ramverket Mocha och kan köras genom att ange:
 
 ```bash
 npm test
@@ -185,6 +208,8 @@ För att generera dokumentation:
 ```bash
 npm run docs
 ```
+
+Filerna placeras under `./docs/`.
 
 ```bash
 xdg-open docs/index.html
