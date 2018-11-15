@@ -170,9 +170,9 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
    0         0
 ```
 
-### Test
+### Tester
 
-Tester körs genom att ange:
+Testerna är baserade på ramverket Mocha. Dessa körs genom att ange:
 
 ```bash
 npm test
@@ -184,4 +184,8 @@ För att generera dokumentation:
 
 ```bash
 npm run docs
+```
+
+```bash
+xdg-open docs/index.html
 ```

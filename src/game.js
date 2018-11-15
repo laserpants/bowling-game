@@ -96,10 +96,15 @@ class Game {
   }
 
   /**
+   * Generate a score card for this game in the form of an array of points
+   * accumulated after each completed frame. The number of entries in this
+   * array may be less than the number of played frames, in the case of a
+   * strike or spare, for which the score is still undetermined.
+   *
    * @returns {Array} a score card for this game
    */
   score() {
-    let score = [], i = 0, 
+    let score = [], i = 0,
         rolls = [].concat.apply([], this.frames);
     while (score.length < 10 && i < rolls.length - 1) {
       const strike = 10 == rolls[i];
