@@ -59,7 +59,6 @@ class Game {
   constructor() {
     this.id = uniqid();
     this.frames = [];
-    Game.store.save(this);
   }
 
   /**
@@ -94,6 +93,28 @@ class Game {
    */
   isComplete() {
     return 10 == this.frames.length;
+  }
+
+  /**
+   * @returns {Array} a score card for this game
+   */
+  score() {
+    let score = [], i = 0, 
+        rolls = [].concat.apply([], this.frames);
+    while (score.length < 10 && i < rolls.length - 1) {
+      const strike = 10 == rolls[i];
+      const spare  = !strike && 10 == rolls[i] + rolls[i + 1];
+      if ((strike || spare) && i >= rolls.length - 2)
+        break;
+      if (strike || spare) {
+        score.push(rolls[i] + rolls[i + 1] + rolls[i + 2]);
+      } else {
+        score.push(rolls[i] + rolls[i + 1]);
+      }
+      i += strike ? 1 : 2;
+    }
+    let acc = 0;
+    return score.map(s => { acc += s; return acc; });
   }
 
   _generateFrame() {

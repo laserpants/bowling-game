@@ -9,6 +9,7 @@ const port = process.env.PORT || 4399;
  */
 app.post('/games', (req, res) => {
   const game = new Game();
+  Game.store.save(game);
   game.complete = false;
   res.json({ game });
 });
