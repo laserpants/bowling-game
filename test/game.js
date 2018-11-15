@@ -4,8 +4,8 @@ import Game from '../src/game';
 function arrayEq(xs, ys) {
   if (xs.length != ys.length)
     return false;
-  for (let i = 0; i < xs.length; i++) 
-    if (xs[i] != ys[i]) 
+  for (let i = 0; i < xs.length; i++)
+    if (xs[i] != ys[i])
       return false;
   return true;
 }
