@@ -7,7 +7,9 @@ Ett bowlingspel där två personer spelar mot varandra.
 * Installera [Node.js och npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 * Installera beroenden:
 
-```bash
+```
+npm install
+cd client
 npm install
 ```
 
@@ -15,7 +17,7 @@ npm install
 
 Starta serverprogramvaran genom att ange:
 
-```bash
+```
 npm start
 ```
 
@@ -55,7 +57,7 @@ En ny spelomgång (serie) registreras. Returnerar en identifierare (textsträng)
 
 ###### Exempel:
 
-```bash
+```
 curl -X POST http://localhost:4399/games
 ```
 
@@ -79,7 +81,7 @@ Detta anrop returnerar också ett attribut `frame` beskrivande den uppställning
 
 ###### Exempel:
 
-```bash
+```
 curl -X POST http://localhost:4399/games/1ljzlmmjoj1s0kn/frames
 ```
 
@@ -108,7 +110,7 @@ Visar information om ett pågående eller avslutat spel.
 
 ###### Exempel:
 
-```bash
+```
 curl http://localhost:4399/games/1ljzlmmjoj1s0kn
 ```
 
@@ -197,7 +199,7 @@ Låt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet
 
 Testerna är baserade på ramverket Mocha och kan köras genom att ange:
 
-```bash
+```
 npm test
 ```
 
@@ -205,12 +207,12 @@ npm test
 
 För att generera dokumentation:
 
-```bash
+```
 npm run docs
 ```
 
 Filerna placeras under `./docs/`.
 
-```bash
+```
 xdg-open docs/index.html
 ```
