@@ -4,6 +4,7 @@
   "description": "Ett litet bowlingspel",
   "main": "src/index.js",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4",
     "uniqid": "^5.0.3"
   },
