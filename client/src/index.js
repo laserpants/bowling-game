@@ -1,8 +1,7 @@
-import React from 'react';
+import React    from 'react';
 import ReactDOM from 'react-dom';
-import update from 'immutability-helper';
 
-const api = { url: 'http://localhost:4399' };
+const api = { url: process.env.API_URL || 'http://localhost:4399' };
 
 const request = {
   method: 'POST',
@@ -13,65 +12,7 @@ const request = {
   }
 };
 
-class ScoreCard extends React.Component {
-
-  render() {
-    return (
-      <div>
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                Player
-              </td>
-              <td colSpan='3'>
-                1
-              </td>
-              <td colSpan='3'>
-                2
-              </td>
-            </tr>
-            <tr>
-              <td rowSpan='2'>
-                1
-              </td>
-              <td></td>
-              <td>
-                x
-              </td>
-              <td>
-                y
-              </td>
-            </tr>
-            <tr>
-              <td colSpan='3'>
-                1
-              </td>
-            </tr>
-            <tr>
-              <td rowSpan='2'>
-                2
-              </td>
-              <td></td>
-              <td>
-                1
-              </td>
-              <td>
-                1
-              </td>
-            </tr>
-            <tr>
-              <td colSpan='3'>
-                1
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    );
-  }
-
-}
+const wait = (ms) => new Promise(resolve => setTimeout(() => resolve(), ms));
 
 class Game extends React.Component {
 
@@ -80,85 +21,91 @@ class Game extends React.Component {
     this.start = this.start.bind(this);
     this.advance = this.advance.bind(this);
     this.state = {
-      game: {
-        'player-1': {},
-        'player-2': {},
-        state: 'pending'  // 'pending' | 'wait' | 'ongoing' | 'complete'
-      }
+      players: [],
+      framesPlayed: 0,
+      status: 'pending'  // 'pending' | 'wait' | 'ongoing' | 'complete'
     };
   }
 
   start() {
-    let game = {};
+    this.setState({ status: 'wait' });
+    let players = [];
     fetch(`${api.url}/games`, request)
     .then(response => response.json())
     .then(json => {
-      game['player-1'] = { id: json.game.id, frames: [], score: [] };
+      players.push(json.game);
     })
     .then(() => fetch(`${api.url}/games`, request))
     .then(response => response.json())
     .then(json => {
-      game['player-2'] = { id: json.game.id, frames: [], score: [] };
+      players.push(json.game);
     })
+    .then(() => wait(250))
     .then(() => {
-      game.state = 'ongoing';
-    })
-    .then(() => {
-      this.setState({ game });
+      this.setState({ players, status: 'ongoing' });
     });
   }
 
   advance() {
-    let { game } = this.state;
-    let frames = [];
-    if ('ongoing' == game.state) {
-      fetch(`${api.url}/games/${game['player-1'].id}/frames`, request)
+    this.setState({ status: 'wait' });
+    const { players, status, framesPlayed } = this.state;
+    let nextPlayers = [], nextFramesPlayed = 1 + framesPlayed;
+    if ('ongoing' == status) {
+      fetch(`${api.url}/games/${players[0].id}/frames`, request)
       .then(response => response.json())
       .then(json => {
-        frames.push(json.frame)
+        nextPlayers.push(json.game);
       })
-      .then(() => fetch(`${api.url}/games/${game['player-2'].id}/frames`, request))
+      .then(() => fetch(`${api.url}/games/${players[1].id}/frames`, request))
       .then(response => response.json())
       .then(json => {
-        frames.push(json.frame)
+        nextPlayers.push(json.game);
       })
+      .then(() => wait(250))
       .then(() => {
-        this.setState(update(this.state, {
-          game: {
-            'player-1': {
-              frames: { $push: [frames[0]] }
-            },
-            'player-2': {
-              frames: { $push: [frames[1]] }
-            }
-          }
-        }));
+        this.setState({ 
+          players: nextPlayers,
+          framesPlayed: nextFramesPlayed,
+          status: 10 == nextFramesPlayed ? 'complete' : 'ongoing'
+        });
       });
     }
   }
 
   render() {
-    const { game } = this.state;
+    const { status } = this.state;
+    if ('wait' == status) {
+      return (
+        <div>
+          Please wait...
+        </div>
+      );
+    }
     return (
       <div>
-        Hello
         <div>
-          <button onClick={this.start}>
-            Start a game
-          </button>
-        </div>
-        <div>
-          {JSON.stringify(this.state.game)}
-        </div>
-        <div>
-          {'ongoing' == game.state && (
-            <button onClick={this.advance}>
-              Play next frame
+          {('pending' == status || 'complete' == status) && (
+            <button onClick={this.start}>
+              {'Start a new game'}
             </button>
           )}
         </div>
         <div>
-          <ScoreCard />
+          {('complete' == status || 'ongoing' == status) && (
+            <div>
+              Game
+            </div>
+          )}
+        </div>
+        <div>
+          <pre>{JSON.stringify(this.state, null, 2)}</pre>
+        </div>
+        <div>
+          {'ongoing' == status && (
+            <button onClick={this.advance}>
+              {'Play next frame'}
+            </button>
+          )}
         </div>
       </div>
     );
