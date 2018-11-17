@@ -1,8 +1,11 @@
+import cors    from 'cors';
 import express from 'express';
 import Game    from './game';
 
 const app  = express();
 const port = process.env.PORT || 4399;
+
+app.use(cors());
 
 /*
  * Create a new game
