@@ -14,6 +14,35 @@ const request = {
 
 const wait = (ms) => new Promise(resolve => setTimeout(() => resolve(), ms));
 
+class Frame extends React.Component {
+
+  render() {
+    return (
+      <div style={{ display: 'flex', width: '66px', height: '60px', border: '1px solid red' }}>
+        <div style={{
+          width: '20px',
+          height: '20px',
+          border: '1px solid black'
+        }}>
+        </div>
+        <div style={{
+          width: '20px',
+          height: '20px',
+          border: '1px solid black'
+        }}>
+        </div>
+        <div style={{
+          width: '20px',
+          height: '20px',
+          border: '1px solid black'
+        }}>
+        </div>
+      </div>
+    );
+  }
+
+}
+
 class Game extends React.Component {
 
   constructor() {
@@ -92,8 +121,17 @@ class Game extends React.Component {
         </div>
         <div>
           {('complete' == status || 'ongoing' == status) && (
-            <div>
-              Game
+            <div style={{ display: 'flex' }}>
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
+              <Frame />
             </div>
           )}
         </div>
