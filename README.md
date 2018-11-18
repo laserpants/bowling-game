@@ -147,10 +147,10 @@ Klientappen kommer vara webbläsarbaserad och använda JavaScript som utveckling
 | M&aring;ndag  | Projektupplägg              | 1-3 timmar | :heavy_check_mark: |
 | Tisdag        | API                         | 1-3 timmar | :heavy_check_mark: |
 | Onsdag        | API                         | 1-3 timmar | :heavy_check_mark: |
-| Torsdag       | Klientapp                   | 1-3 timmar |    |
-| Fredag        | Klientapp                   | 1-3 timmar |    |
-| L&ouml;rdag   | Test och dokumentation      | 1-3 timmar |    |
-| S&ouml;ndag   | :tada: Premiärfest på Café Opera? |      |    |
+| Torsdag       | Klientapp                   | 1-3 timmar | :heavy_check_mark: |
+| Fredag        | Klientapp                   | 1-3 timmar | :heavy_check_mark: |
+| L&ouml;rdag   | Test och dokumentation      | 1-3 timmar | :heavy_check_mark: |
+| S&ouml;ndag   | :tada: Premiärfest på Café Opera? |      | Inställt p.g.a. stambyte |
 
 | Dag           | Aktivitet                   | Timmar     |
 |---------------|-----------------------------|------------|
