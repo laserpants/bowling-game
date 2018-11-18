@@ -98,7 +98,7 @@ class Game {
   /**
    * Generate a score sheet for this game in the form of an array of the points
    * accumulated after each completed frame. In the case that the last frame is
-   * a strike or spare, the number of entries in this array may be less than 
+   * a strike or spare, the number of entries in this array may be less than
    * the number of played frames.
    *
    * @returns {Array} a score sheet for this game
@@ -129,7 +129,9 @@ class Game {
       // a strike or a spare in that frame.
       if (frame.isStrike()) {
         const bonusFrame = new Frame();
-        return frame.deliveries.concat(bonusFrame.deliveries);
+        return frame.deliveries.concat(
+          bonusFrame.isStrike() ? [10, random(10)] : bonusFrame.deliveries
+        );
       } else if (frame.isSpare()) {
         return frame.deliveries.concat(random(10));
       }
