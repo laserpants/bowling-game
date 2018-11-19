@@ -93,7 +93,7 @@ curl -X POST http://localhost:4399/games
 
 Avancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring denna process. Om spelomgången redan är avslutad returneras felkoden `410 Gone`.
 
-Detta anrop returnerar också ett attribut `frame` beskrivande den uppställning (frame) som lagts till. 
+Detta anrop returnerar också ett attribut `frame` som beskriver den uppställning (frame) som lagts till. 
 
 ###### Exempel:
 
