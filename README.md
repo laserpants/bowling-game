@@ -28,7 +28,7 @@ cd client
 npm start
 ```
 
-&Ouml;ppna sedan `http://localhost:8080/` i webbläsaren.
+&Ouml;ppna sedan http://localhost:8080/ i webbläsaren.
 
 #### Miljövariabler
 
