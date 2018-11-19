@@ -55,7 +55,7 @@ Lösningen består av en API-del samt en klientdel.
 
 #### HTTP-API
 
-Gemensamt för anropen nedan är att dessa returnerar ett objekt med attributet `game`. Detta objekt har i sin tur följande underattribut:
+Gemensamt för samtliga anrop är att de returnerar ett objekt med attributet `game`. Detta objekt har i sin tur följande underattribut:
 
 | Attribut     | Typ     | Beskrivning                                |
 |--------------|---------|--------------------------------------------|
@@ -150,11 +150,11 @@ curl http://localhost:4399/games/1ljzlmmjoj1s0kn
 
 #### Poängberäkning 
 
-http://slocums.homestead.com/gamescore.html
+Se till exempel: http://slocums.homestead.com/gamescore.html
 
 #### Klient
 
-Klientappen kommer vara webbläsarbaserad och använda JavaScript som utvecklingsspråk.
+Klientappen är webbläsarbaserad och bygger på JavaScript och React.
 
 ### Plan
 
