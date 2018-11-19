@@ -2,6 +2,8 @@ import React from 'react';
 
 const api = { url: process.env.API_URL || 'http://localhost:4399' };
 
+console.log(api);
+
 const request = {
   method: 'POST',
   mode: 'cors',
