@@ -221,6 +221,8 @@ npm test
 
 ### Dokumentation
 
+* Se https://laserpants.github.io/bowling-game/docs
+
 För att generera dokumentation:
 
 ```
