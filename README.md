@@ -21,6 +21,13 @@ Starta serverprogramvaran genom att ange:
 npm start
 ```
 
+Klientappen kan köras i utvecklingsläge genom att ange:
+
+```
+cd client
+npm start
+```
+
 #### Miljövariabler
 
 Följande miljövariabler är tillgängliga och kan (om så önskas) anges, antingen direkt eller i en `.env`-fil.
