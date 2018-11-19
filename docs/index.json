@@ -1,0 +1,1200 @@
+[
+  {
+    "__docId__": 1,
+    "kind": "external",
+    "name": "Infinity",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Infinity",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Infinity",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 2,
+    "kind": "external",
+    "name": "NaN",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~NaN",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 3,
+    "kind": "external",
+    "name": "undefined",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~undefined",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 4,
+    "kind": "external",
+    "name": "null",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~null",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 5,
+    "kind": "external",
+    "name": "Object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 6,
+    "kind": "external",
+    "name": "object",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~object",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 7,
+    "kind": "external",
+    "name": "Function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 8,
+    "kind": "external",
+    "name": "function",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~function",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 9,
+    "kind": "external",
+    "name": "Boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 10,
+    "kind": "external",
+    "name": "boolean",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~boolean",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 11,
+    "kind": "external",
+    "name": "Symbol",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Symbol",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 12,
+    "kind": "external",
+    "name": "Error",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Error",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 13,
+    "kind": "external",
+    "name": "EvalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/EvalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~EvalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 14,
+    "kind": "external",
+    "name": "InternalError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/InternalError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~InternalError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 15,
+    "kind": "external",
+    "name": "RangeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RangeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RangeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 16,
+    "kind": "external",
+    "name": "ReferenceError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ReferenceError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ReferenceError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 17,
+    "kind": "external",
+    "name": "SyntaxError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~SyntaxError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 18,
+    "kind": "external",
+    "name": "TypeError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypeError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~TypeError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 19,
+    "kind": "external",
+    "name": "URIError",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/URIError",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~URIError",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 20,
+    "kind": "external",
+    "name": "Number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 21,
+    "kind": "external",
+    "name": "number",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~number",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 22,
+    "kind": "external",
+    "name": "Date",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Date",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 23,
+    "kind": "external",
+    "name": "String",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~String",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 24,
+    "kind": "external",
+    "name": "string",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~string",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 25,
+    "kind": "external",
+    "name": "RegExp",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~RegExp",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 26,
+    "kind": "external",
+    "name": "Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 27,
+    "kind": "external",
+    "name": "Int8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 28,
+    "kind": "external",
+    "name": "Uint8Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 29,
+    "kind": "external",
+    "name": "Uint8ClampedArray",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint8ClampedArray",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint8ClampedArray",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 30,
+    "kind": "external",
+    "name": "Int16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 31,
+    "kind": "external",
+    "name": "Uint16Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint16Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint16Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 32,
+    "kind": "external",
+    "name": "Int32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Int32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Int32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 33,
+    "kind": "external",
+    "name": "Uint32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Uint32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Uint32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 34,
+    "kind": "external",
+    "name": "Float32Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float32Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float32Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 35,
+    "kind": "external",
+    "name": "Float64Array",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Float64Array",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Float64Array",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 36,
+    "kind": "external",
+    "name": "Map",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Map",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 37,
+    "kind": "external",
+    "name": "Set",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Set",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 38,
+    "kind": "external",
+    "name": "WeakMap",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakMap",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 39,
+    "kind": "external",
+    "name": "WeakSet",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~WeakSet",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 40,
+    "kind": "external",
+    "name": "ArrayBuffer",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~ArrayBuffer",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 41,
+    "kind": "external",
+    "name": "DataView",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/DataView",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~DataView",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 42,
+    "kind": "external",
+    "name": "JSON",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~JSON",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 43,
+    "kind": "external",
+    "name": "Promise",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Promise",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 44,
+    "kind": "external",
+    "name": "Generator",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Generator",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Generator",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 45,
+    "kind": "external",
+    "name": "GeneratorFunction",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/GeneratorFunction",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~GeneratorFunction",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 46,
+    "kind": "external",
+    "name": "Reflect",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Reflect",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 47,
+    "kind": "external",
+    "name": "Proxy",
+    "externalLink": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy",
+    "memberof": "src/.external-ecmascript.js",
+    "static": true,
+    "longname": "src/.external-ecmascript.js~Proxy",
+    "access": "public",
+    "description": "",
+    "builtinExternal": true
+  },
+  {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/game.js",
+    "content": "import assert from 'assert';\nimport uniqid from 'uniqid';\nimport MemoryStore from './store/memory';\nimport random from './rand';\n\n/**\n * A frame consists of up to two deliveries. If you bowl a strike there is\n * only one delivery in that frame. However, if you have pins remaining after\n * the first ball, then the frame consists of two deliveries.\n */\nclass Frame {\n\n  /**\n   * Create and populate a frame with random values\n   *\n   * @constructor\n   */\n  constructor() {\n    this.deliveries = [];\n    const k = random(10);\n    this.deliveries.push(k);\n    if (10 != k) {\n      this.deliveries.push(random(10 - k));\n    }\n  }\n\n  /**\n   * @returns {boolean} true if the frame is a strike, or false otherwise\n   */\n  isStrike() {\n    return 1 == this.deliveries.length;\n  }\n\n  /**\n   * @returns {boolean} true if the frame is a spare, or false otherwise\n   */\n  isSpare() {\n    if (2 != this.deliveries.length)\n      return false;\n    return 10 == (this.deliveries[0] + this.deliveries[1]);\n  }\n\n}\n\n/**\n * A game consists of ten frames. A maximum of two deliveries is made in each\n * frame except in the last frame, in which three deliveries are made if the\n * player has scored a strike or a spare.\n */\nclass Game {\n\n  static store;\n\n  /**\n   * Create a new game\n   *\n   * @constructor\n   */\n  constructor() {\n    this.id = uniqid();\n    this.frames = [];\n  }\n\n  /**\n   * Static method to lookup an existing game by its ID.\n   *\n   * @param {string} id the ID of the game to search for\n   *\n   * @returns {Game} a Game object, or null if a game with the given ID does\n   *                 not exist\n   */\n  static find(id) {\n    return Game.store.find(id);\n  }\n\n  /**\n   * Advance an ongoing game by generating and inserting a new frame.\n   *\n   * @returns {Array} a new frame, or the empty array if the game is already\n   *                  complete\n   */\n  insertFrame() {\n    if (this.isComplete()) {\n      return [];\n    }\n    const frame = this._generateFrame();\n    this.frames.push(frame);\n    return frame;\n  }\n\n  /**\n   * @returns {boolean} a boolean denoting whether the game is completed or not\n   */\n  isComplete() {\n    return 10 == this.frames.length;\n  }\n\n  /**\n   * Generate a score sheet for this game in the form of an array of the points\n   * accumulated after each completed frame. In the case that the last frame is\n   * a strike or spare, the number of entries in this array may be less than\n   * the number of played frames.\n   *\n   * @returns {Array} a score sheet for this game\n   */\n  score() {\n    let score = [], i = 0,\n        rolls = [].concat.apply([], this.frames);\n    while (score.length < 10 && i < rolls.length - 1) {\n      const strike = 10 == rolls[i];\n      const spare  = !strike && 10 == rolls[i] + rolls[i + 1];\n      if ((strike || spare) && i >= rolls.length - 2)\n        break;\n      if (strike || spare) {\n        score.push(rolls[i] + rolls[i + 1] + rolls[i + 2]);\n      } else {\n        score.push(rolls[i] + rolls[i + 1]);\n      }\n      i += strike ? 1 : 2;\n    }\n    let acc = 0;\n    return score.map(s => { acc += s; return acc; });\n  }\n\n  _generateFrame() {\n    const frame = new Frame();\n    if (9 == this.frames.length) {\n      // In the last frame, three deliveries are made if the player has scored\n      // a strike or a spare in that frame.\n      if (frame.isStrike()) {\n        const bonusFrame = new Frame();\n        return frame.deliveries.concat(\n          bonusFrame.isStrike() ? [10, random(10)] : bonusFrame.deliveries\n        );\n      } else if (frame.isSpare()) {\n        return frame.deliveries.concat(random(10));\n      }\n    }\n    return frame.deliveries;\n  }\n\n}\n\nGame.store = new MemoryStore();\n\nexport default Game;\n",
+    "static": true,
+    "longname": "/home/laserpants/code/bowling-game/src/game.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "class",
+    "name": "Frame",
+    "memberof": "src/game.js",
+    "static": true,
+    "longname": "src/game.js~Frame",
+    "access": "public",
+    "export": false,
+    "importPath": "bowling-game/src/game.js",
+    "importStyle": null,
+    "description": "A frame consists of up to two deliveries. If you bowl a strike there is\nonly one delivery in that frame. However, if you have pins remaining after\nthe first ball, then the frame consists of two deliveries.",
+    "lineNumber": 11,
+    "interface": false,
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/game.js~Frame",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Frame#constructor",
+    "access": "public",
+    "description": "Create and populate a frame with random values",
+    "lineNumber": 18,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "deliveries",
+    "memberof": "src/game.js~Frame",
+    "static": false,
+    "longname": "src/game.js~Frame#deliveries",
+    "access": "public",
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "method",
+    "name": "isStrike",
+    "memberof": "src/game.js~Frame",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Frame#isStrike",
+    "access": "public",
+    "description": "",
+    "lineNumber": 30,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} true if the frame is a strike, or false otherwise"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "true if the frame is a strike, or false otherwise"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "isSpare",
+    "memberof": "src/game.js~Frame",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Frame#isSpare",
+    "access": "public",
+    "description": "",
+    "lineNumber": 37,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} true if the frame is a spare, or false otherwise"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "true if the frame is a spare, or false otherwise"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 54,
+    "kind": "class",
+    "name": "Game",
+    "memberof": "src/game.js",
+    "static": true,
+    "longname": "src/game.js~Game",
+    "access": "public",
+    "export": true,
+    "importPath": "bowling-game/src/game.js",
+    "importStyle": "Game",
+    "description": "A game consists of ten frames. A maximum of two deliveries is made in each\nframe except in the last frame, in which three deliveries are made if the\nplayer has scored a strike or a spare.",
+    "lineNumber": 50,
+    "interface": false
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "store",
+    "memberof": "src/game.js~Game",
+    "static": true,
+    "longname": "src/game.js~Game.store",
+    "access": "public",
+    "description": null,
+    "lineNumber": 52,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Game#constructor",
+    "access": "public",
+    "description": "Create a new game",
+    "lineNumber": 59,
+    "unknown": [
+      {
+        "tagName": "@constructor",
+        "tagValue": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 57,
+    "kind": "member",
+    "name": "id",
+    "memberof": "src/game.js~Game",
+    "static": false,
+    "longname": "src/game.js~Game#id",
+    "access": "public",
+    "description": null,
+    "lineNumber": 60,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "member",
+    "name": "frames",
+    "memberof": "src/game.js~Game",
+    "static": false,
+    "longname": "src/game.js~Game#frames",
+    "access": "public",
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "find",
+    "memberof": "src/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/game.js~Game.find",
+    "access": "public",
+    "description": "Static method to lookup an existing game by its ID.",
+    "lineNumber": 72,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Game} a Game object, or null if a game with the given ID does\n                not exist"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": "the ID of the game to search for"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Game"
+      ],
+      "spread": false,
+      "description": "a Game object, or null if a game with the given ID does\n                not exist"
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "method",
+    "name": "insertFrame",
+    "memberof": "src/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Game#insertFrame",
+    "access": "public",
+    "description": "Advance an ongoing game by generating and inserting a new frame.",
+    "lineNumber": 82,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Array} a new frame, or the empty array if the game is already\n                 complete"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "a new frame, or the empty array if the game is already\n                 complete"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "isComplete",
+    "memberof": "src/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Game#isComplete",
+    "access": "public",
+    "description": "",
+    "lineNumber": 94,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{boolean} a boolean denoting whether the game is completed or not"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "boolean"
+      ],
+      "spread": false,
+      "description": "a boolean denoting whether the game is completed or not"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 62,
+    "kind": "method",
+    "name": "score",
+    "memberof": "src/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Game#score",
+    "access": "public",
+    "description": "Generate a score sheet for this game in the form of an array of the points\naccumulated after each completed frame. In the case that the last frame is\na strike or spare, the number of entries in this array may be less than\nthe number of played frames.",
+    "lineNumber": 106,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Array} a score sheet for this game"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Array"
+      ],
+      "spread": false,
+      "description": "a score sheet for this game"
+    },
+    "params": []
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "_generateFrame",
+    "memberof": "src/game.js~Game",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/game.js~Game#_generateFrame",
+    "access": "private",
+    "description": null,
+    "lineNumber": 125,
+    "undocument": true,
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "file",
+    "name": "src/index.js",
+    "content": "import cors    from 'cors';\nimport express from 'express';\nimport Game    from './game';\n\nconst app  = express();\nconst port = process.env.PORT || 4399;\n\napp.use(cors());\n\n/*\n * Create a new game\n */\napp.post('/games', (req, res) => {\n  const game = new Game();\n  Game.store.save(game);\n  res.json({\n    game: {\n      ...game,\n      complete: false,\n      score: [],\n      currentTotal: 0\n    }\n  });\n});\n\n/*\n * View an existing game\n */\napp.get('/games/:id', (req, res) => {\n  let game = Game.find(req.params['id']);\n  if (!game) {\n    res\n      .status(404)\n      .json({ error: 'a game with that id does not exist' });\n    return;\n  }\n  const score = game.score();\n  res.json({\n    game: {\n      ...game,\n      complete: game.isComplete(), score,\n      currentTotal: score.length ? score[score.length - 1] : 0\n    }\n  });\n});\n\n/*\n * Advance an ongoing game by adding a new frame\n */\napp.post('/games/:id/frames', (req, res) => {\n  const game = Game.find(req.params['id']);\n  if (!game) {\n    res\n      .status(404)\n      .json({ error: 'a game with that id does not exist' });\n    return;\n  }\n  if (game.isComplete()) {\n    res.status(410).json({  // 410 = Resource is no longer available\n      error: 'this game is already complete'\n    });\n  } else {\n    const frame = game.insertFrame();\n    const score = game.score();\n    res.json({\n      game: {\n        ...game,\n        complete: game.isComplete(), score,\n        currentTotal: score[score.length - 1]\n      },\n      frame\n    });\n  }\n});\n\napp.listen(port, () => {\n  console.log(`Listening on port ${port}`);\n});\n",
+    "static": true,
+    "longname": "/home/laserpants/code/bowling-game/src/index.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 65,
+    "kind": "variable",
+    "name": "app",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~app",
+    "access": "public",
+    "export": false,
+    "importPath": "bowling-game",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 66,
+    "kind": "variable",
+    "name": "port",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~port",
+    "access": "public",
+    "export": false,
+    "importPath": "bowling-game",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 67,
+    "kind": "file",
+    "name": "src/rand.js",
+    "content": "const rand = (n) => Math.floor(Math.random()*(n + 1));\n\nexport default rand;\n",
+    "static": true,
+    "longname": "/home/laserpants/code/bowling-game/src/rand.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 68,
+    "kind": "function",
+    "name": "rand",
+    "memberof": "src/rand.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/rand.js~rand",
+    "access": "public",
+    "export": true,
+    "importPath": "bowling-game/src/rand.js",
+    "importStyle": "rand",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "params": [
+      {
+        "name": "n",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 69,
+    "kind": "file",
+    "name": "src/store/memory.js",
+    "content": "export default class MemoryStore {\n\n  constructor() {\n    this.data = {};\n  }\n\n  save(game) {\n    this.data[game.id] = game;\n  }\n\n  find(id) {\n    return this.data[id];\n  }\n\n}\n",
+    "static": true,
+    "longname": "/home/laserpants/code/bowling-game/src/store/memory.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 70,
+    "kind": "class",
+    "name": "MemoryStore",
+    "memberof": "src/store/memory.js",
+    "static": true,
+    "longname": "src/store/memory.js~MemoryStore",
+    "access": "public",
+    "export": true,
+    "importPath": "bowling-game/src/store/memory.js",
+    "importStyle": "MemoryStore",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 71,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/store/memory.js~MemoryStore",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/store/memory.js~MemoryStore#constructor",
+    "access": "public",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true
+  },
+  {
+    "__docId__": 72,
+    "kind": "member",
+    "name": "data",
+    "memberof": "src/store/memory.js~MemoryStore",
+    "static": false,
+    "longname": "src/store/memory.js~MemoryStore#data",
+    "access": "public",
+    "description": null,
+    "lineNumber": 4,
+    "undocument": true,
+    "type": {
+      "types": [
+        "{}"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "save",
+    "memberof": "src/store/memory.js~MemoryStore",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/store/memory.js~MemoryStore#save",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "game",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 74,
+    "kind": "method",
+    "name": "find",
+    "memberof": "src/store/memory.js~MemoryStore",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/store/memory.js~MemoryStore#find",
+    "access": "public",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "file",
+    "name": "src/store/sqlite.js",
+    "content": "class SqliteStore {\n\n  save(game) {\n    throw new Error('not implemented');\n  }\n\n  find(id) {\n    throw new Error('not implemented');\n  }\n\n}\n\nexport default SqliteStore;\n",
+    "static": true,
+    "longname": "/home/laserpants/code/bowling-game/src/store/sqlite.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 76,
+    "kind": "class",
+    "name": "SqliteStore",
+    "memberof": "src/store/sqlite.js",
+    "static": true,
+    "longname": "src/store/sqlite.js~SqliteStore",
+    "access": "public",
+    "export": true,
+    "importPath": "bowling-game/src/store/sqlite.js",
+    "importStyle": "SqliteStore",
+    "description": null,
+    "lineNumber": 1,
+    "undocument": true,
+    "interface": false
+  },
+  {
+    "__docId__": 77,
+    "kind": "method",
+    "name": "save",
+    "memberof": "src/store/sqlite.js~SqliteStore",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/store/sqlite.js~SqliteStore#save",
+    "access": "public",
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "params": [
+      {
+        "name": "game",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "find",
+    "memberof": "src/store/sqlite.js~SqliteStore",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/store/sqlite.js~SqliteStore#find",
+    "access": "public",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "params": [
+      {
+        "name": "id",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null
+  },
+  {
+    "kind": "index",
+    "content": "# bowling-game :bowling:\n\nEtt bowlingspel där två personer spelar mot varandra. \n\n### Installation\n\n* Installera [Node.js och npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)\n* Installera beroenden:\n\n```\nnpm install\ncd client\nnpm install\n```\n\n#### API-server\n\nStarta serverprogramvaran genom att ange:\n\n```\nnpm start\n```\n\nKlientappen kan därefter köras i utvecklingsläge genom att ange:\n\n```\ncd client\nnpm start\n```\n\n&Ouml;ppna sedan http://localhost:8080/ i webbläsaren.\n\n#### Miljövariabler\n\nFöljande miljövariabler är tillgängliga och kan (om så önskas) anges, antingen direkt eller i en `.env`-fil.\n\n| Variabel      | Beskrivning                      | Förvalt värde |\n|---------------|----------------------------------|---------------|\n| PORT          | Den port som servern lyssnar på  | 4399          |\n| API_URL       | Serverns url (plockas upp av Webpack) | ht&#8203;tp://localhost:4399 |\n\n### Beskrivning\n\nEn omgång startar med att användaren klickar på en knapp och genererar ett slumpvis resultat. Förloppet visas i tabellform. Vanliga [bowlingregler](http://www.alltombowling.nu/skola_rakna.php) gäller. Spärr och strike ska också kunna genomföras.\n\n### Lösning\n\n![preview.png](preview.png)\n\n#### Demo\n\nSpela direkt online: https://laserpants.github.io/bowling-game/client/dist/\n\nLösningen består av en API-del samt en klientdel. \n\n#### HTTP-API\n\nGemensamt för samtliga anrop är att de returnerar ett objekt med attributet `game`. Detta objekt har i sin tur följande underattribut:\n\n| Attribut     | Typ     | Beskrivning                                |\n|--------------|---------|--------------------------------------------|\n| id           | string  | En unik identifierare för spelomgången      |\n| complete     | boolean | Indikerar huruvida omgången är avslutad eller ej |\n| frames<sup>†</sup> | Array   | Resultat för varje enskild uppställning    |\n| score        | Array   | Poäng efter varje uppställning             |\n| currentTotal | number  | Total poängsumma i spelets nuvarande skede |\n\n† Resultatet listas som en array där varje element i sin tur är en array med ett eller två element, förutom sista uppställningen som består av två eller tre element. T.ex. `[4, 3]` innebär att fyra käglor slogs ut i första slaget, och tre i det andra.\n\n##### `POST /games`\n\nEn ny spelomgång (serie) registreras. Returnerar en identifierare (textsträng) som används i efterföljande anrop.\n\n###### Exempel:\n\n```\ncurl -X POST http://localhost:4399/games\n```\n\n```json\n{\n  \"game\": {\n    \"id\": \"1ljzlmmjoj1s0kn\",\n    \"frames\": [],\n    \"complete\": false,\n    \"score\": [],\n    \"currentTotal\": 0\n  }\n}\n```\n\n##### `POST /games/:game_id/frames`\n\nAvancerar en pågående spelomgång genom att beräkna en ny uppställning. Vid en uppställning har spelaren två försök att välta samtliga käglor. Se [nedan](#bakgrund) för resonemang kring denna process. Om spelomgången redan är avslutad returneras felkoden `410 Gone`.\n\nDetta anrop returnerar också ett attribut `frame` beskrivande den uppställning (frame) som lagts till. \n\n###### Exempel:\n\n```\ncurl -X POST http://localhost:4399/games/1ljzlmmjoj1s0kn/frames\n```\n\n```json\n{\n  \"game\": {\n    \"id\": \"1ljzlmmjoj1s0kn\",\n    \"frames\": [\n      [ 9, 0 ],\n      [ 4, 2 ],\n      [ 8, 0 ],\n      [ 6, 2 ],\n      [ 0, 8 ]\n    ],\n    \"complete\": false,\n    \"score\": [ 9, 15, 23, 31, 39 ],\n    \"currentTotal\": 39\n  },\n  \"frame\": [ 0, 8 ]\n}\n```\n\n##### `GET /games/:id`\n\nVisar information om ett pågående eller avslutat spel.\n\n###### Exempel:\n\n```\ncurl http://localhost:4399/games/1ljzlmmjoj1s0kn\n```\n\n```json\n{\n  \"game\": {\n    \"id\": \"1ljzlmmjoj1s0kn\",\n    \"frames\": [\n      [ 9, 0 ],\n      [ 4, 2 ],\n      [ 8, 0 ],\n      [ 6, 2 ],\n      [ 0, 8 ]\n    ],\n    \"complete\": false,\n    \"score\": [ 9, 15, 23, 31, 39 ],\n    \"currentTotal\": 39\n  }\n}\n```\n\n#### Poängberäkning \n\nSe till exempel: http://slocums.homestead.com/gamescore.html\n\n#### Klient\n\nKlientappen är webbläsarbaserad och bygger på JavaScript och React.\n\n### Plan\n\n| Dag           | Aktivitet                   | Timmar     |    |\n|---------------|-----------------------------|------------|----|\n| M&aring;ndag  | Projektupplägg              | 1-3 timmar | :heavy_check_mark: |\n| Tisdag        | API                         | 1-3 timmar | :heavy_check_mark: |\n| Onsdag        | API                         | 1-3 timmar | :heavy_check_mark: |\n| Torsdag       | Klientapp                   | 1-3 timmar | :heavy_check_mark: |\n| Fredag        | Klientapp                   | 1-3 timmar | :heavy_check_mark: |\n| L&ouml;rdag   | Test och dokumentation      | 1-3 timmar | :heavy_check_mark: |\n| S&ouml;ndag   | :tada: Premiärfest på Café Opera? |      | Inställt p.g.a. stambyte |\n\n| Dag           | Aktivitet                   | Timmar     |\n|---------------|-----------------------------|------------|\n| Vecka 2       | Utforska alternativa idéer (se nedan) | 3-6 timmar |\n\n### Bakgrund\n\n```\n6 7 8 9\n 3 4 5\n  1 2 \n   0\n```\n\nSpelaren genomför ett eller två slag vid varje uppställning. Detta resulterar i en av 2^10 = 1024 möjliga konfigurationer av käglor, där varje enskild kägla antingen kan ha slagits ut eller lämnats intakt. T.ex.,\n\n```\n6 7 8 9    - - - 9    6 7 8 9    - - - -    6 7 8 9\n - - 5      - 4 -      - - -      - - -      3 - 5\n  1 -        - -        - -        - -        1 2\n   0          0          0          -          0\n```\n\n#### En kort parentes om alternativa idéer\n\nI ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och samverkan med käglorna, genom vilket man uppnår ett mer intressant resultat.\n\n##### Simulering\n\nEn annan rolig variant skulle vara att spelaren har möjlighet att ange ett antal inparametrar och att spelförloppet bygger på någon Game of Life-liknande simulering där de mönster som uppstår avgör vilka käglor som träffas av klotet. Detta kan vara värt att utforska senare.\n\n#### En slumptalsbaserad modell\n\nI den nuvarande lösningen har spelaren inte någon möjlighet att påverka resultatet, utan vi förlitar oss på slumpen och en naiv sannolikhetsfördelning.\n\nLåt *k* vara antalet käglor spelaren slår ut i första slaget och *j* antalet utslagna käglor i andra slaget, där *0 ≤ k ≤ 10* och *0 ≤ j ≤ (10 - k)*. För enkelhets skull antar vi att *P(k = k₀) = 1:11* för samtliga *k₀* och *P(j = j₀) = 1:(10 - k + 1)* för samtliga *j₀*. Om vi vill veta exakt vilka käglor som slagits ut (dvs. inte bara antalet) finns det *C(10, k)* möjliga sätt att slå ut *k* käglor, där *C(n, k)* är binomialkoefficienten (*n* över *k*), och vi kan åter igen använda en uniform sannolikhetsfördelning över denna mängd. Detta är inte speciellt realistiskt om man tar i beaktande, t.ex., de två konfigurationerna nedan, där den till höger inträffar betydligt oftare än den till vänster. Vi bortser dock för tillfället från dessa mer teoretiska problemställningar.\n\n```\n6 7 8 9   6 7 8 -\n 3 - 5     3 4 5\n  1 2       1 2\n   0         0\n```\n\n### Enhetstester\n\nTesterna är baserade på ramverket Mocha och kan köras genom att ange:\n\n```\nnpm test\n```\n\n### Dokumentation\n\nFör att generera dokumentation:\n\n```\nnpm run docs\n```\n\nFilerna placeras under `./docs/`.\n\n```\nxdg-open docs/index.html\n```\n",
+    "longname": "/home/laserpants/code/bowling-game/README.md",
+    "name": "./README.md",
+    "static": true,
+    "access": "public"
+  },
+  {
+    "kind": "packageJSON",
+    "content": "{\n  \"name\": \"bowling-game\",\n  \"version\": \"0.1.0\",\n  \"description\": \"Ett litet bowlingspel\",\n  \"main\": \"src/index.js\",\n  \"dependencies\": {\n    \"cors\": \"^2.8.5\",\n    \"express\": \"^4.16.4\",\n    \"uniqid\": \"^5.0.3\"\n  },\n  \"devDependencies\": {\n    \"babel-cli\": \"^6.26.0\",\n    \"babel-preset-env\": \"^1.7.0\",\n    \"babel-preset-stage-2\": \"^6.24.1\",\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"mocha\": \"^5.2.0\",\n    \"nodemon\": \"^1.18.6\"\n  },\n  \"engines\": {\n    \"node\": \"6.9.0\"\n  },\n  \"scripts\": {\n    \"start\": \"nodemon --exec babel-node --presets env,stage-2 src/index.js\",\n    \"test\": \"node_modules/.bin/mocha --compilers js:babel-core/register\",\n    \"docs\": \"node_modules/.bin/esdoc -c esdoc.json\",\n    \"heroku-postbuild\": \"npm install\",\n    \"heroku\": \"babel-node src/index.js\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/laserpants/bowling-game.git\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"BSD-3\",\n  \"bugs\": {\n    \"url\": \"https://github.com/laserpants/bowling-game/issues\"\n  },\n  \"homepage\": \"https://github.com/laserpants/bowling-game#readme\"\n}\n",
+    "longname": "/home/laserpants/code/bowling-game/package.json",
+    "name": "package.json",
+    "static": true,
+    "access": "public"
+  }
+]

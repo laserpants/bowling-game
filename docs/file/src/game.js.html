@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/game.js | bowling-game</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Ett litet bowlingspel"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bowling-game"><meta property="twitter:description" content="Ett litet bowlingspel"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/laserpants/bowling-game"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-rand">rand</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#store">store</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/store/memory.js~MemoryStore.html">MemoryStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/store/sqlite.js~SqliteStore.html">SqliteStore</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/game.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import assert from &apos;assert&apos;;
+import uniqid from &apos;uniqid&apos;;
+import MemoryStore from &apos;./store/memory&apos;;
+import random from &apos;./rand&apos;;
+
+/**
+ * A frame consists of up to two deliveries. If you bowl a strike there is
+ * only one delivery in that frame. However, if you have pins remaining after
+ * the first ball, then the frame consists of two deliveries.
+ */
+class Frame {
+
+  /**
+   * Create and populate a frame with random values
+   *
+   * @constructor
+   */
+  constructor() {
+    this.deliveries = [];
+    const k = random(10);
+    this.deliveries.push(k);
+    if (10 != k) {
+      this.deliveries.push(random(10 - k));
+    }
+  }
+
+  /**
+   * @returns {boolean} true if the frame is a strike, or false otherwise
+   */
+  isStrike() {
+    return 1 == this.deliveries.length;
+  }
+
+  /**
+   * @returns {boolean} true if the frame is a spare, or false otherwise
+   */
+  isSpare() {
+    if (2 != this.deliveries.length)
+      return false;
+    return 10 == (this.deliveries[0] + this.deliveries[1]);
+  }
+
+}
+
+/**
+ * A game consists of ten frames. A maximum of two deliveries is made in each
+ * frame except in the last frame, in which three deliveries are made if the
+ * player has scored a strike or a spare.
+ */
+class Game {
+
+  static store;
+
+  /**
+   * Create a new game
+   *
+   * @constructor
+   */
+  constructor() {
+    this.id = uniqid();
+    this.frames = [];
+  }
+
+  /**
+   * Static method to lookup an existing game by its ID.
+   *
+   * @param {string} id the ID of the game to search for
+   *
+   * @returns {Game} a Game object, or null if a game with the given ID does
+   *                 not exist
+   */
+  static find(id) {
+    return Game.store.find(id);
+  }
+
+  /**
+   * Advance an ongoing game by generating and inserting a new frame.
+   *
+   * @returns {Array} a new frame, or the empty array if the game is already
+   *                  complete
+   */
+  insertFrame() {
+    if (this.isComplete()) {
+      return [];
+    }
+    const frame = this._generateFrame();
+    this.frames.push(frame);
+    return frame;
+  }
+
+  /**
+   * @returns {boolean} a boolean denoting whether the game is completed or not
+   */
+  isComplete() {
+    return 10 == this.frames.length;
+  }
+
+  /**
+   * Generate a score sheet for this game in the form of an array of the points
+   * accumulated after each completed frame. In the case that the last frame is
+   * a strike or spare, the number of entries in this array may be less than
+   * the number of played frames.
+   *
+   * @returns {Array} a score sheet for this game
+   */
+  score() {
+    let score = [], i = 0,
+        rolls = [].concat.apply([], this.frames);
+    while (score.length &lt; 10 &amp;&amp; i &lt; rolls.length - 1) {
+      const strike = 10 == rolls[i];
+      const spare  = !strike &amp;&amp; 10 == rolls[i] + rolls[i + 1];
+      if ((strike || spare) &amp;&amp; i &gt;= rolls.length - 2)
+        break;
+      if (strike || spare) {
+        score.push(rolls[i] + rolls[i + 1] + rolls[i + 2]);
+      } else {
+        score.push(rolls[i] + rolls[i + 1]);
+      }
+      i += strike ? 1 : 2;
+    }
+    let acc = 0;
+    return score.map(s =&gt; { acc += s; return acc; });
+  }
+
+  _generateFrame() {
+    const frame = new Frame();
+    if (9 == this.frames.length) {
+      // In the last frame, three deliveries are made if the player has scored
+      // a strike or a spare in that frame.
+      if (frame.isStrike()) {
+        const bonusFrame = new Frame();
+        return frame.deliveries.concat(
+          bonusFrame.isStrike() ? [10, random(10)] : bonusFrame.deliveries
+        );
+      } else if (frame.isSpare()) {
+        return frame.deliveries.concat(random(10));
+      }
+    }
+    return frame.deliveries;
+  }
+
+}
+
+Game.store = new MemoryStore();
+
+export default Game;
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

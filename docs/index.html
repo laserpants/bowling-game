@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl">
+  <title data-ice="title">Home | bowling-game</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Ett litet bowlingspel"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="bowling-game"><meta property="twitter:description" content="Ett litet bowlingspel"></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+<a style="position:relative; top:3px;" href="https://github.com/laserpants/bowling-game"><img width="20px" src="./image/github.png"></a></header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/game.js~Game.html">Game</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-rand">rand</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#store">store</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/store/memory.js~MemoryStore.html">MemoryStore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/store/sqlite.js~SqliteStore.html">SqliteStore</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="bowling-game--bowling-">bowling-game :bowling:</h1><p>Ett bowlingspel d&#xE4;r tv&#xE5; personer spelar mot varandra. </p>
+<h3 id="installation">Installation</h3><ul>
+<li>Installera <a href="https://docs.npmjs.com/downloading-and-installing-node-js-and-npm">Node.js och npm</a></li>
+<li>Installera beroenden:</li>
+</ul>
+<pre><code><code class="source-code prettyprint">npm install
+cd client
+npm install</code>
+</code></pre><h4 id="api-server">API-server</h4><p>Starta serverprogramvaran genom att ange:</p>
+<pre><code><code class="source-code prettyprint">npm start</code>
+</code></pre><p>Klientappen kan d&#xE4;refter k&#xF6;ras i utvecklingsl&#xE4;ge genom att ange:</p>
+<pre><code><code class="source-code prettyprint">cd client
+npm start</code>
+</code></pre><p>&#xD6;ppna sedan <a href="http://localhost:8080/">http://localhost:8080/</a> i webbl&#xE4;saren.</p>
+<h4 id="milj&#xF6;variabler">Milj&#xF6;variabler</h4><p>F&#xF6;ljande milj&#xF6;variabler &#xE4;r tillg&#xE4;ngliga och kan (om s&#xE5; &#xF6;nskas) anges, antingen direkt eller i en <code>.env</code>-fil.</p>
+<table>
+<thead>
+<tr>
+<th>Variabel</th>
+<th>Beskrivning</th>
+<th>F&#xF6;rvalt v&#xE4;rde</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PORT</td>
+<td>Den port som servern lyssnar p&#xE5;</td>
+<td>4399</td>
+</tr>
+<tr>
+<td>API_URL</td>
+<td>Serverns url (plockas upp av Webpack)</td>
+<td>ht&#x200B;tp://localhost:4399</td>
+</tr>
+</tbody>
+</table>
+<h3 id="beskrivning">Beskrivning</h3><p>En omg&#xE5;ng startar med att anv&#xE4;ndaren klickar p&#xE5; en knapp och genererar ett slumpvis resultat. F&#xF6;rloppet visas i tabellform. Vanliga <a href="http://www.alltombowling.nu/skola_rakna.php">bowlingregler</a> g&#xE4;ller. Sp&#xE4;rr och strike ska ocks&#xE5; kunna genomf&#xF6;ras.</p>
+<h3 id="l&#xF6;sning">L&#xF6;sning</h3><p><img src="preview.png" alt="preview.png"></p>
+<h4 id="demo">Demo</h4><p>Spela direkt online: <a href="https://laserpants.github.io/bowling-game/client/dist/">https://laserpants.github.io/bowling-game/client/dist/</a></p>
+<p>L&#xF6;sningen best&#xE5;r av en API-del samt en klientdel. </p>
+<h4 id="http-api">HTTP-API</h4><p>Gemensamt f&#xF6;r samtliga anrop &#xE4;r att de returnerar ett objekt med attributet <code>game</code>. Detta objekt har i sin tur f&#xF6;ljande underattribut:</p>
+<table>
+<thead>
+<tr>
+<th>Attribut</th>
+<th>Typ</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>En unik identifierare f&#xF6;r spelomg&#xE5;ngen</td>
+</tr>
+<tr>
+<td>complete</td>
+<td>boolean</td>
+<td>Indikerar huruvida omg&#xE5;ngen &#xE4;r avslutad eller ej</td>
+</tr>
+<tr>
+<td>frames&lt;sup&gt;&#x2020;&lt;/sup&gt;</td>
+<td>Array</td>
+<td>Resultat f&#xF6;r varje enskild uppst&#xE4;llning</td>
+</tr>
+<tr>
+<td>score</td>
+<td>Array</td>
+<td>Po&#xE4;ng efter varje uppst&#xE4;llning</td>
+</tr>
+<tr>
+<td>currentTotal</td>
+<td>number</td>
+<td>Total po&#xE4;ngsumma i spelets nuvarande skede</td>
+</tr>
+</tbody>
+</table>
+<p>&#x2020; Resultatet listas som en array d&#xE4;r varje element i sin tur &#xE4;r en array med ett eller tv&#xE5; element, f&#xF6;rutom sista uppst&#xE4;llningen som best&#xE5;r av tv&#xE5; eller tre element. T.ex. <code>[4, 3]</code> inneb&#xE4;r att fyra k&#xE4;glor slogs ut i f&#xF6;rsta slaget, och tre i det andra.</p>
+<h5 id="-code-post--games--code-"><code>POST /games</code></h5><p>En ny spelomg&#xE5;ng (serie) registreras. Returnerar en identifierare (textstr&#xE4;ng) som anv&#xE4;nds i efterf&#xF6;ljande anrop.</p>
+<h6 id="exempel-">Exempel:</h6><pre><code><code class="source-code prettyprint">curl -X POST http://localhost:4399/games</code>
+</code></pre><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;game&quot;: {
+    &quot;id&quot;: &quot;1ljzlmmjoj1s0kn&quot;,
+    &quot;frames&quot;: [],
+    &quot;complete&quot;: false,
+    &quot;score&quot;: [],
+    &quot;currentTotal&quot;: 0
+  }
+}</code>
+</code></pre>
+<h5 id="-code-post--games--game-id-frames--code-"><code>POST /games/:game_id/frames</code></h5><p>Avancerar en p&#xE5;g&#xE5;ende spelomg&#xE5;ng genom att ber&#xE4;kna en ny uppst&#xE4;llning. Vid en uppst&#xE4;llning har spelaren tv&#xE5; f&#xF6;rs&#xF6;k att v&#xE4;lta samtliga k&#xE4;glor. Se <a href="#bakgrund">nedan</a> f&#xF6;r resonemang kring denna process. Om spelomg&#xE5;ngen redan &#xE4;r avslutad returneras felkoden <code>410 Gone</code>.</p>
+<p>Detta anrop returnerar ocks&#xE5; ett attribut <code>frame</code> beskrivande den uppst&#xE4;llning (frame) som lagts till. </p>
+<h6 id="exempel-">Exempel:</h6><pre><code><code class="source-code prettyprint">curl -X POST http://localhost:4399/games/1ljzlmmjoj1s0kn/frames</code>
+</code></pre><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;game&quot;: {
+    &quot;id&quot;: &quot;1ljzlmmjoj1s0kn&quot;,
+    &quot;frames&quot;: [
+      [ 9, 0 ],
+      [ 4, 2 ],
+      [ 8, 0 ],
+      [ 6, 2 ],
+      [ 0, 8 ]
+    ],
+    &quot;complete&quot;: false,
+    &quot;score&quot;: [ 9, 15, 23, 31, 39 ],
+    &quot;currentTotal&quot;: 39
+  },
+  &quot;frame&quot;: [ 0, 8 ]
+}</code>
+</code></pre>
+<h5 id="-code-get--games--id--code-"><code>GET /games/:id</code></h5><p>Visar information om ett p&#xE5;g&#xE5;ende eller avslutat spel.</p>
+<h6 id="exempel-">Exempel:</h6><pre><code><code class="source-code prettyprint">curl http://localhost:4399/games/1ljzlmmjoj1s0kn</code>
+</code></pre><pre><code class="lang-json"><code class="source-code prettyprint">{
+  &quot;game&quot;: {
+    &quot;id&quot;: &quot;1ljzlmmjoj1s0kn&quot;,
+    &quot;frames&quot;: [
+      [ 9, 0 ],
+      [ 4, 2 ],
+      [ 8, 0 ],
+      [ 6, 2 ],
+      [ 0, 8 ]
+    ],
+    &quot;complete&quot;: false,
+    &quot;score&quot;: [ 9, 15, 23, 31, 39 ],
+    &quot;currentTotal&quot;: 39
+  }
+}</code>
+</code></pre>
+<h4 id="po&#xE4;ngber&#xE4;kning">Po&#xE4;ngber&#xE4;kning</h4><p>Se till exempel: <a href="http://slocums.homestead.com/gamescore.html">http://slocums.homestead.com/gamescore.html</a></p>
+<h4 id="klient">Klient</h4><p>Klientappen &#xE4;r webbl&#xE4;sarbaserad och bygger p&#xE5; JavaScript och React.</p>
+<h3 id="plan">Plan</h3><table>
+<thead>
+<tr>
+<th>Dag</th>
+<th>Aktivitet</th>
+<th>Timmar</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M&#xE5;ndag</td>
+<td>Projektuppl&#xE4;gg</td>
+<td>1-3 timmar</td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>Tisdag</td>
+<td>API</td>
+<td>1-3 timmar</td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>Onsdag</td>
+<td>API</td>
+<td>1-3 timmar</td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>Torsdag</td>
+<td>Klientapp</td>
+<td>1-3 timmar</td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>Fredag</td>
+<td>Klientapp</td>
+<td>1-3 timmar</td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>L&#xF6;rdag</td>
+<td>Test och dokumentation</td>
+<td>1-3 timmar</td>
+<td>:heavy_check_mark:</td>
+</tr>
+<tr>
+<td>S&#xF6;ndag</td>
+<td>:tada: Premi&#xE4;rfest p&#xE5; Caf&#xE9; Opera?</td>
+<td></td>
+<td>Inst&#xE4;llt p.g.a. stambyte</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Dag</th>
+<th>Aktivitet</th>
+<th>Timmar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vecka 2</td>
+<td>Utforska alternativa id&#xE9;er (se nedan)</td>
+<td>3-6 timmar</td>
+</tr>
+</tbody>
+</table>
+<h3 id="bakgrund">Bakgrund</h3><pre><code><code class="source-code prettyprint">6 7 8 9
+ 3 4 5
+  1 2 
+   0</code>
+</code></pre><p>Spelaren genomf&#xF6;r ett eller tv&#xE5; slag vid varje uppst&#xE4;llning. Detta resulterar i en av 2^10 = 1024 m&#xF6;jliga konfigurationer av k&#xE4;glor, d&#xE4;r varje enskild k&#xE4;gla antingen kan ha slagits ut eller l&#xE4;mnats intakt. T.ex.,</p>
+<pre><code><code class="source-code prettyprint">6 7 8 9    - - - 9    6 7 8 9    - - - -    6 7 8 9
+ - - 5      - 4 -      - - -      - - -      3 - 5
+  1 -        - -        - -        - -        1 2
+   0          0          0          -          0</code>
+</code></pre><h4 id="en-kort-parentes-om-alternativa-id&#xE9;er">En kort parentes om alternativa id&#xE9;er</h4><p>I ett f&#xE4;rdighetsbaserat spel (vilket riktig bowling i allra h&#xF6;gstra grad &#xE4;r) kan man t&#xE4;nka sig att spelaren styr f&#xF6;rloppet genom att anv&#xE4;nda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan d&#xE5; anv&#xE4;ndas f&#xF6;r att ber&#xE4;kna klotets r&#xF6;relse och samverkan med k&#xE4;glorna, genom vilket man uppn&#xE5;r ett mer intressant resultat.</p>
+<h5 id="simulering">Simulering</h5><p>En annan rolig variant skulle vara att spelaren har m&#xF6;jlighet att ange ett antal inparametrar och att spelf&#xF6;rloppet bygger p&#xE5; n&#xE5;gon Game of Life-liknande simulering d&#xE4;r de m&#xF6;nster som uppst&#xE5;r avg&#xF6;r vilka k&#xE4;glor som tr&#xE4;ffas av klotet. Detta kan vara v&#xE4;rt att utforska senare.</p>
+<h4 id="en-slumptalsbaserad-modell">En slumptalsbaserad modell</h4><p>I den nuvarande l&#xF6;sningen har spelaren inte n&#xE5;gon m&#xF6;jlighet att p&#xE5;verka resultatet, utan vi f&#xF6;rlitar oss p&#xE5; slumpen och en naiv sannolikhetsf&#xF6;rdelning.</p>
+<p>L&#xE5;t <em>k</em> vara antalet k&#xE4;glor spelaren sl&#xE5;r ut i f&#xF6;rsta slaget och <em>j</em> antalet utslagna k&#xE4;glor i andra slaget, d&#xE4;r <em>0 &#x2264; k &#x2264; 10</em> och <em>0 &#x2264; j &#x2264; (10 - k)</em>. F&#xF6;r enkelhets skull antar vi att <em>P(k = k&#x2080;) = 1:11</em> f&#xF6;r samtliga <em>k&#x2080;</em> och <em>P(j = j&#x2080;) = 1:(10 - k + 1)</em> f&#xF6;r samtliga <em>j&#x2080;</em>. Om vi vill veta exakt vilka k&#xE4;glor som slagits ut (dvs. inte bara antalet) finns det <em>C(10, k)</em> m&#xF6;jliga s&#xE4;tt att sl&#xE5; ut <em>k</em> k&#xE4;glor, d&#xE4;r <em>C(n, k)</em> &#xE4;r binomialkoefficienten (<em>n</em> &#xF6;ver <em>k</em>), och vi kan &#xE5;ter igen anv&#xE4;nda en uniform sannolikhetsf&#xF6;rdelning &#xF6;ver denna m&#xE4;ngd. Detta &#xE4;r inte speciellt realistiskt om man tar i beaktande, t.ex., de tv&#xE5; konfigurationerna nedan, d&#xE4;r den till h&#xF6;ger intr&#xE4;ffar betydligt oftare &#xE4;n den till v&#xE4;nster. Vi bortser dock f&#xF6;r tillf&#xE4;llet fr&#xE5;n dessa mer teoretiska problemst&#xE4;llningar.</p>
+<pre><code><code class="source-code prettyprint">6 7 8 9   6 7 8 -
+ 3 - 5     3 4 5
+  1 2       1 2
+   0         0</code>
+</code></pre><h3 id="enhetstester">Enhetstester</h3><p>Testerna &#xE4;r baserade p&#xE5; ramverket Mocha och kan k&#xF6;ras genom att ange:</p>
+<pre><code><code class="source-code prettyprint">npm test</code>
+</code></pre><h3 id="dokumentation">Dokumentation</h3><p>F&#xF6;r att generera dokumentation:</p>
+<pre><code><code class="source-code prettyprint">npm run docs</code>
+</code></pre><p>Filerna placeras under <code>./docs/</code>.</p>
+<pre><code><code class="source-code prettyprint">xdg-open docs/index.html</code>
+</code></pre></div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.1.0)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
