@@ -69,7 +69,7 @@ Gemensamt för samtliga anrop är att de returnerar ett objekt med attributet `g
 
 ##### `POST /games`
 
-En ny spelomgång (serie) registreras. Returnerar en identifierare (textsträng) som används i efterföljande anrop.
+En ny spelomgång (serie) registreras. Returnerar bl.a. en identifierare (textsträng) som används i efterföljande anrop.
 
 ###### Exempel:
 
