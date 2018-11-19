@@ -8,7 +8,7 @@ module.exports = () => {
   const envKeys = env ? Object.keys(env).reduce((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
     return prev;
-  }, {}) : [];
+  }, {}) : {};
 
   return {
     entry: './src/index.js',
