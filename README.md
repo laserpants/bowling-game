@@ -28,6 +28,8 @@ cd client
 npm start
 ```
 
+&Ouml;ppna sedan `http://localhost:8080/` i webbläsaren.
+
 #### Miljövariabler
 
 Följande miljövariabler är tillgängliga och kan (om så önskas) anges, antingen direkt eller i en `.env`-fil.
