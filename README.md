@@ -49,7 +49,7 @@ En omgång startar med att användaren klickar på en knapp och genererar ett sl
 
 #### Demo
 
-Spela direkt online: https://laserpants.github.io/bowling-game/client/dist/
+* Spela direkt online: https://laserpants.github.io/bowling-game/client/dist/
 
 Lösningen består av en API-del samt en klientdel. 
 
