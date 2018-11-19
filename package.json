@@ -33,7 +33,10 @@
     "url": "git+https://github.com/laserpants/bowling-game.git"
   },
   "keywords": [],
-  "author": "",
+  "author": {
+    "name": "Heikki Johannes Hildén",
+    "url": "https://github.com/laserpants"
+  },
   "license": "BSD-3",
   "bugs": {
     "url": "https://github.com/laserpants/bowling-game/issues"
