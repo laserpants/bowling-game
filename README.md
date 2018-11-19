@@ -21,6 +21,15 @@ Starta serverprogramvaran genom att ange:
 npm start
 ```
 
+Klientappen kan köras i utvecklingsläge genom att ange:
+
+```
+cd client
+npm start
+```
+
+&Ouml;ppna sedan http://localhost:8080/ i webbläsaren.
+
 #### Miljövariabler
 
 Följande miljövariabler är tillgängliga och kan (om så önskas) anges, antingen direkt eller i en `.env`-fil.
@@ -28,12 +37,15 @@ Följande miljövariabler är tillgängliga och kan (om så önskas) anges, anti
 | Variabel      | Beskrivning                      | Förvalt värde |
 |---------------|----------------------------------|---------------|
 | PORT          | Den port som servern lyssnar på  | 4399          |
+| API_URL       | Serverns url (plockas upp av Webpack) | "http://localhost:4399" |
 
 ### Beskrivning
 
 En omgång startar med att användaren klickar på en knapp och genererar ett slumpvis resultat. Förloppet visas i tabellform. Vanliga [bowlingregler](http://www.alltombowling.nu/skola_rakna.php) gäller. Spärr och strike ska också kunna genomföras.
 
 ### Lösning
+
+![preview.png](preview.png)
 
 Lösningen består av en API-del samt en klientdel. 
 
