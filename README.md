@@ -134,7 +134,7 @@ curl http://localhost:4399/games/1ljzlmmjoj1s0kn
 
 #### Poängberäkning 
 
-TODO
+http://slocums.homestead.com/gamescore.html
 
 #### Klient
 
