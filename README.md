@@ -21,7 +21,7 @@ Starta serverprogramvaran genom att ange:
 npm start
 ```
 
-Klientappen kan köras i utvecklingsläge genom att ange:
+Klientappen kan därefter köras i utvecklingsläge genom att ange:
 
 ```
 cd client
@@ -37,7 +37,7 @@ Följande miljövariabler är tillgängliga och kan (om så önskas) anges, anti
 | Variabel      | Beskrivning                      | Förvalt värde |
 |---------------|----------------------------------|---------------|
 | PORT          | Den port som servern lyssnar på  | 4399          |
-| API_URL       | Serverns url (plockas upp av Webpack) | "http://localhost:4399" |
+| API_URL       | Serverns url (plockas upp av Webpack) | ht&#8203;tp://localhost:4399 |
 
 ### Beskrivning
 
@@ -47,11 +47,15 @@ En omgång startar med att användaren klickar på en knapp och genererar ett sl
 
 ![preview.png](preview.png)
 
+#### Demo
+
+Spela direkt online: https://laserpants.github.io/bowling-game/client/dist/
+
 Lösningen består av en API-del samt en klientdel. 
 
 #### HTTP-API
 
-Gemensamt för anropen nedan är att dessa returnerar ett objekt med attributet `game`. Detta objekt har i sin tur följande underattribut:
+Gemensamt för samtliga anrop är att de returnerar ett objekt med attributet `game`. Detta objekt har i sin tur följande underattribut:
 
 | Attribut     | Typ     | Beskrivning                                |
 |--------------|---------|--------------------------------------------|
@@ -146,11 +150,11 @@ curl http://localhost:4399/games/1ljzlmmjoj1s0kn
 
 #### Poängberäkning 
 
-http://slocums.homestead.com/gamescore.html
+Se till exempel: http://slocums.homestead.com/gamescore.html
 
 #### Klient
 
-Klientappen kommer vara webbläsarbaserad och använda JavaScript som utvecklingsspråk.
+Klientappen är webbläsarbaserad och bygger på JavaScript och React.
 
 ### Plan
 
