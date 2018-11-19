@@ -35,6 +35,8 @@ En omgång startar med att användaren klickar på en knapp och genererar ett sl
 
 ### Lösning
 
+[preview.png]
+
 Lösningen består av en API-del samt en klientdel. 
 
 #### HTTP-API
