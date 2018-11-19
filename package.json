@@ -1,6 +1,6 @@
 {
   "name": "bowling-game",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Ett litet bowlingspel",
   "main": "src/index.js",
   "dependencies": {
