@@ -37,7 +37,7 @@ Följande miljövariabler är tillgängliga och kan (om så önskas) anges, anti
 | Variabel      | Beskrivning                      | Förvalt värde |
 |---------------|----------------------------------|---------------|
 | PORT          | Den port som servern lyssnar på  | 4399          |
-| API_URL       | Serverns url (plockas upp av Webpack) | "http://localhost:4399" |
+| API_URL       | Serverns url (plockas upp av Webpack) | ht&#8203;tp://localhost:4399 |
 
 ### Beskrivning
 
