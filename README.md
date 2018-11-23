@@ -65,7 +65,7 @@ Gemensamt för samtliga anrop är att de returnerar ett objekt med attributet `g
 | score        | Array   | Poäng efter varje uppställning             |
 | currentTotal | number  | Total poängsumma i spelets nuvarande skede |
 
-† Resultatet listas som en array där varje element i sin tur är en array med ett eller två element, förutom sista uppställningen som består av två eller tre element. T.ex. `[4, 3]` innebär att fyra käglor slogs ut i första slaget, och tre i det andra.
+† Resultatet listas som en array där varje element i sin tur är en array med ett eller två heltalselement, förutom sista uppställningen som består av två eller tre element. T.ex. `[4, 3]` innebär att fyra käglor slogs ut i första slaget, och tre i det andra.
 
 ##### `POST /games`
 
