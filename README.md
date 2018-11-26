@@ -192,7 +192,7 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
 
 #### En kort parentes om alternativa idéer
 
-I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och samverkan med käglorna, genom vilket man uppnår ett mer intressant resultat.
+I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och inverkan på käglorna, genom vilket man uppnår ett mer intressant resultat.
 
 ##### Simulering
 
