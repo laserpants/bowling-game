@@ -49,7 +49,7 @@ En omgång startar med att användaren klickar på en knapp och genererar ett sl
 
 #### Demo
 
-Spela direkt online: https://laserpants.github.io/bowling-game/client/dist/
+* Spela direkt online: https://laserpants.github.io/bowling-game/client/dist/
 
 Lösningen består av en API-del samt en klientdel. 
 
@@ -65,11 +65,11 @@ Gemensamt för samtliga anrop är att de returnerar ett objekt med attributet `g
 | score        | Array   | Poäng efter varje uppställning             |
 | currentTotal | number  | Total poängsumma i spelets nuvarande skede |
 
-† Resultatet listas som en array där varje element i sin tur är en array med ett eller två element, förutom sista uppställningen som består av två eller tre element. T.ex. `[4, 3]` innebär att fyra käglor slogs ut i första slaget, och tre i det andra.
+† Resultatet listas som en array där varje element i sin tur är en array med ett eller två heltalselement, förutom sista uppställningen som består av två eller tre element. T.ex. `[4, 3]` innebär att fyra käglor slogs ut i första slaget, och tre i det andra.
 
 ##### `POST /games`
 
-En ny spelomgång (serie) registreras. Returnerar en identifierare (textsträng) som används i efterföljande anrop.
+En ny spelomgång (serie) registreras. Returnerar bl.a. en identifierare (textsträng) som används i efterföljande anrop.
 
 ###### Exempel:
 
@@ -192,7 +192,7 @@ Spelaren genomför ett eller två slag vid varje uppställning. Detta resulterar
 
 #### En kort parentes om alternativa idéer
 
-I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och samverkan med käglorna, genom vilket man uppnår ett mer intressant resultat.
+I ett färdighetsbaserat spel (vilket riktig bowling i allra högstra grad är) kan man tänka sig att spelaren styr förloppet genom att använda t.ex. muspekaren eller tangentbordet. En fysikmotor, som Box2D, kan då användas för att beräkna klotets rörelse och inverkan på käglorna, genom vilket man uppnår ett mer intressant resultat.
 
 ##### Simulering
 
