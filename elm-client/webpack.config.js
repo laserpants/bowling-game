@@ -5,6 +5,8 @@ module.exports = {
 
   mode: 'development',
 
+  entry: './index.js',
+
   module: {
     rules: [{
         test: /\.html$/,
@@ -21,13 +23,6 @@ module.exports = {
       }
     ]
   },
-
-  plugins: [
-    new CopyWebpackPlugin([  
-      { from: 'src/css', to: 'css/' },
-      { from: 'src/img', to: 'img/' }
-    ], {})
-  ],
 
   devServer: {
     inline: true,
