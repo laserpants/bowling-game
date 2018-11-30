@@ -18,7 +18,7 @@ body > div.game-container {
 div.score-card-container {
   width: 670px;
   height: 62px;
-  background: url('score-card.gif');
+  background: url('../img/score-card.gif');
   background-position: 0 -21px;
   background-repeat: no-repeat;
   margin: 0 0 8px 0;
