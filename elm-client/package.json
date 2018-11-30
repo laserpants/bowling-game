@@ -1,0 +1,22 @@
+{
+  "name": "bowling-game-elm-client",
+  "version": "0.0.5",
+  "description": "",
+  "scripts": {
+  },
+  "keywords": [],
+  "author": {
+    "name": "Heikki Johannes Hildén",
+    "url": "https://github.com/laserpants"
+  },
+  "license": "BSD-3",
+  "devDependencies": {
+    "elm-webpack-loader": "^5.0.0",
+    "file-loader": "^2.0.0",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "dependencies": {
+  }
+}
