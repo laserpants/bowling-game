@@ -6,6 +6,6 @@ var Elm = require('./src/Main.elm').Elm;
 Elm.Main.init({ 
   node: document.getElementById('elm-code'),
   flags: { 
-    api: 'http://localhost:4399' 
+    api: process.env.API_URL || 'http://localhost:4399' 
   }
 });
