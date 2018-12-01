@@ -1,8 +1,9 @@
 module Game exposing (..)
 
-import Api
 import Http
 import Json.Decode exposing (..)
+
+type alias Response a = Result Http.Error a
 
 type alias Frame = List Int
 
@@ -25,26 +26,28 @@ decoder =
 
 type Msg
   = CreateRequest
-  | CreateResponse (Api.Response Game)
+  | CreateResponse (Response Game)
   | AdvanceRequest
-  | AdvanceResponse (Api.Response Game)
-
-createCmd : Cmd Msg
-createCmd = Http.post
-  { url    = Api.url ++ "/games"
-  , body   = Http.emptyBody
-  , expect = Http.expectJson CreateResponse decoder }
-
-advanceCmd : Game -> Cmd Msg
-advanceCmd game = Http.post
-  { url    = Api.url ++ "/games/" ++ game.id ++ "/frames"
-  , body   = Http.emptyBody
-  , expect = Http.expectJson AdvanceResponse decoder }
+  | AdvanceResponse (Response Game)
 
 type alias Config = { players : Int }
 
-create : Config -> Cmd Msg
-create conf = Cmd.batch (List.repeat conf.players createCmd)
+create : String -> Config -> Cmd Msg
+create url conf = 
 
-advance : List Game -> Cmd Msg
-advance = Cmd.batch << List.map advanceCmd
+  let createCmd = Http.post
+        { url    = url ++ "/games"
+        , body   = Http.emptyBody
+        , expect = Http.expectJson CreateResponse decoder }
+
+   in Cmd.batch (List.repeat conf.players createCmd)
+
+advance : String -> List Game -> Cmd Msg
+advance url games = 
+
+  let advanceCmd game = Http.post
+        { url    = url ++ "/games/" ++ game.id ++ "/frames"
+        , body   = Http.emptyBody
+        , expect = Http.expectJson AdvanceResponse decoder }
+  
+   in Cmd.batch (List.map advanceCmd games)

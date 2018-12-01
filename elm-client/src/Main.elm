@@ -1,6 +1,5 @@
 module Main exposing (..)
 
-import Api
 import Browser
 import Debug
 import Game exposing (Frame, Game)
@@ -19,14 +18,16 @@ type alias Model =
   { round   : List Game
   , next    : List Game
   , status  : Status
-  , players : Int }
+  , players : Int 
+  , api     : String }
 
 initialModel : Model
 initialModel =
   { round   = []
   , next    = []
   , status  = Pending
-  , players = 2 }
+  , players = 2 
+  , api     = "http://localhost:4399" }
 
 init : () -> (Model, Cmd Msg)
 init () = (initialModel, Cmd.none)
@@ -43,7 +44,8 @@ update msg model =
                                     , next    = []
                                     , status  = if game.over then Complete
                                                              else Ongoing
-                                    , players = model.players }
+                                    , players = model.players 
+                                    , api     = model.api }
                                else { model | next = next }
 
         Err _ -> { model | status = Error }
@@ -52,11 +54,11 @@ update msg model =
 
         GameMsg Game.CreateRequest ->
           ({ model | next = [], status = Wait },
-            Cmd.map GameMsg (Game.create { players = model.players }))
+            Cmd.map GameMsg (Game.create model.api { players = model.players }))
 
         GameMsg Game.AdvanceRequest ->
           ({ model | next = [], status = Wait },
-            Cmd.map GameMsg (Game.advance model.round))
+            Cmd.map GameMsg (Game.advance model.api model.round))
 
         GameMsg (Game.CreateResponse result) -> (nextModel result, Cmd.none)
         GameMsg (Game.AdvanceResponse result) -> (nextModel result, Cmd.none)
