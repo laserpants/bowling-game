@@ -10,6 +10,8 @@ import Html.Events exposing (..)
 import Http
 import List
 
+type alias Flags = { api : String }
+
 type Msg = GameMsg Game.Msg
 
 type Status = Pending | Wait | Error | Ongoing | Complete
@@ -27,10 +29,10 @@ initialModel =
   , next    = []
   , status  = Pending
   , players = 2 
-  , api     = "http://localhost:4399" }
+  , api     = "" }
 
-init : () -> (Model, Cmd Msg)
-init () = (initialModel, Cmd.none)
+init : Flags -> (Model, Cmd Msg)
+init flags = ({ initialModel | api = flags.api }, Cmd.none)
 
 update : Msg -> Model -> (Model, Cmd Msg)
 update msg model =
@@ -94,7 +96,7 @@ view model =
           , button [ onClick (GameMsg Game.CreateRequest) ]
                    [ text "Start a new game" ] ]
   
-main : Program () Model Msg
+main : Program Flags Model Msg
 main = Browser.element
   { init          = init
   , update        = update
