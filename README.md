@@ -154,7 +154,7 @@ Se till exempel: http://slocums.homestead.com/gamescore.html
 
 #### Klient
 
-Klientappen är webbläsarbaserad och bygger på JavaScript och React.
+Det finns två olika klientapplikationer. Den [första](https://github.com/laserpants/bowling-game/tree/master/client) bygger på JavaScript och React, och den [andra](https://github.com/laserpants/bowling-game/tree/master/elm-client) är utvecklad i programspråket Elm.
 
 ### Plan
 
