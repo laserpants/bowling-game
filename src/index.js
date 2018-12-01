@@ -66,7 +66,7 @@ app.post('/games/:id/frames', (req, res) => {
       game: {
         ...game,
         complete: game.isComplete(), score,
-        currentTotal: score[score.length - 1]
+        currentTotal: score.length ? score[score.length - 1] : 0
       },
       frame
     });
